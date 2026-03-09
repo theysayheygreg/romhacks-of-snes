@@ -21,3 +21,9 @@ Flow:
 - Produced first-pass deep-dive notes for Zelda and Super Metroid.
 - Activated the SMW lane with `SMWDisX`, Lunar Magic, `callisto`, and a base SMW ROM fingerprint.
 - Added external research, design notes, and a Gemini deep-research prompt.
+- Ingested the first Gemini deep-research brief and distilled it into a canonical intake note with verification tasks.
+- Ingested the first Gemini reference-verification brief and converted it into concrete debugger/disassembly/editor follow-up tasks.
+- Ingested the Gemini Metroid PLM brief and turned it into a first-pass canonical Metroid note tied to local source evidence.
+- Ingested the Gemini SMW pipeline brief and turned it into a first-pass canonical SMW workflow model with explicit open verification points.
+- Ingested `multirando-asm` as a second major crossover example, broadening the crossover lane from two-game `SMZ3` thinking toward four-game composite-ROM architecture.
+- Ingested the Gemini multiworld brief and turned it into a first shared note on why Archipelago-style models matter architecturally without making them a near-term implementation target.

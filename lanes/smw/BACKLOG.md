@@ -46,6 +46,17 @@ This backlog is for Super Mario World-specific work inside the SNES workspace.
   - what is assembly-first
   - what is build-system/orchestration-centric
   - what is still patch-first over a canonical base ROM
+  - [x] Produce one first-pass SMW workflow model note.
+
+- [ ] Verify whether a modern `smw-project-template` belongs in this lane
+  - confirm repo identity and maintenance state
+  - classify it relative to `callisto`, Lunar Magic, and `SMWDisX`
+  - compare template assumptions against the staged SMW U 1.00 base ROM
+
+- [ ] Verify modern SMW pipeline assumptions
+  - likely role of SA-1 in current workflows
+  - likely tool ordering for Asar / PIXI / GPS / AddmusicK / UberASM
+  - whether the community still treats clean ROM + tools as the normal base
 
 ## Research Gaps
 

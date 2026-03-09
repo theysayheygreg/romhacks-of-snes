@@ -18,6 +18,7 @@ Current key shared references outside this lane:
 - `../../analysis/super-metroid-rom.json`
 - `../../analysis/super-metroid-key-symbols.json`
 - `../../docs/metroid-randomizer-progression.md`
+- `./plm-room-state-01.md`
 
 Use this lane for future additions like:
 
@@ -27,10 +28,16 @@ Use this lane for future additions like:
 - low-risk patch targets
 - logic terminology comparisons
 - vanilla deep-dive notes such as `./vanilla-deep-dive-01.md`
+- PLM and room-state notes such as `./plm-room-state-01.md`
 
 Current source-reference anchor:
 
 - `../../repos/supermetroid` matches the local Super Metroid ROM exactly by SHA-1 and should be treated like the Metroid-side equivalent of `jpdasm`
+
+Current canonical lane notes:
+
+- `./vanilla-deep-dive-01.md`
+- `./plm-room-state-01.md`
 
 Backlog:
 

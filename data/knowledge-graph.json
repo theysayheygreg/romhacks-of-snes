@@ -125,6 +125,12 @@
       "path": "repos/callisto"
     },
     {
+      "id": "multirando_asm",
+      "type": "project",
+      "label": "multirando-asm",
+      "path": "repos/multirando-asm"
+    },
+    {
       "id": "super_metroid",
       "type": "rom",
       "label": "Super Metroid (Japan, USA) (En,Ja).sfc",
@@ -141,6 +147,16 @@
       "type": "rom",
       "label": "Super Mario World (USA).sfc",
       "analysis": "analysis/super-mario-world-usa-rom.json"
+    },
+    {
+      "id": "zelda1_nes",
+      "type": "game",
+      "label": "The Legend of Zelda (NES)"
+    },
+    {
+      "id": "metroid1_nes",
+      "type": "game",
+      "label": "Metroid (NES)"
     },
     {
       "id": "lunar_magic",
@@ -365,6 +381,31 @@
       "from": "callisto",
       "to": "smw_usa",
       "relation": "builds_from_base_rom"
+    },
+    {
+      "from": "multirando_asm",
+      "to": "smz3",
+      "relation": "extends_crossover_scope_beyond"
+    },
+    {
+      "from": "multirando_asm",
+      "to": "super_metroid",
+      "relation": "uses_or_adapts_game_substrate_of"
+    },
+    {
+      "from": "multirando_asm",
+      "to": "zelda3_jp",
+      "relation": "uses_or_adapts_game_substrate_of"
+    },
+    {
+      "from": "multirando_asm",
+      "to": "zelda1_nes",
+      "relation": "adds_to_crossover"
+    },
+    {
+      "from": "multirando_asm",
+      "to": "metroid1_nes",
+      "relation": "adds_to_crossover"
     },
     {
       "from": "lunar_magic",

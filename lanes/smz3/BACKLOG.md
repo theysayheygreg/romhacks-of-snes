@@ -26,3 +26,8 @@ This backlog is for crossover-specific work around Super Metroid + Zelda 3.
   - Combined ROM memory map
   - Where Zelda-side and Metroid-side data appear in the final image
   - Where crossover-specific patches are injected
+
+- [ ] Compare `SMZ3` against `multirando-asm`
+  - two-game versus four-game crossover scope
+  - ROM banking and runtime-switching assumptions
+  - shared item/progression architecture

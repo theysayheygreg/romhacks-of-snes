@@ -37,6 +37,11 @@ This backlog is for Zelda 3 / ALttP-specific work inside the SNES workspace.
   - Candidate systems for data-only edits
   - Candidate systems for ASM patching
 
+- [ ] Evaluate modern Zelda external lanes
+  - `JaredBrian/AsarUSALTTPDisassembly`
+  - `alttp.run`
+  - `yaze`
+
 ## Research Gaps
 
 - [ ] Verify the exact local reassembly path for `jpdasm`

@@ -13,9 +13,11 @@ Focus:
 Current key shared references outside this lane:
 
 - `../../repos/SMZ3`
+- `../../repos/multirando-asm`
 - `../../docs/smz3-case-study.md`
 - `../../docs/smz3-lineage-concepts.md`
 - `../../docs/progression-grammar.md`
+- `./multirando-asm-01.md`
 
 Use this lane for future additions like:
 
@@ -23,6 +25,7 @@ Use this lane for future additions like:
 - combined ROM layout notes
 - item/reward translation tables
 - crossover patch targets
+- multi-game crossover notes such as `./multirando-asm-01.md`
 
 Backlog:
 

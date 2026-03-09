@@ -21,7 +21,13 @@ It is not a full session transcript.
 - ROM probe tooling and analysis artifacts for Zelda, Super Metroid, and SMW.
 - First-pass deep-dive notes for Zelda and Super Metroid.
 - SMW intake, Lunar Magic notes, and `callisto` build-system notes.
+- First-pass canonical SMW workflow model note.
+- First-pass canonical Metroid PLM and room-state note.
+- `multirando-asm` crossover note and knowledge-graph expansion for four-game composite-ROM architecture.
+- First shared note on multiworld / Archipelago-style architectural relevance.
 - Research resource index, comparative game-design note, and Gemini deep-research prompt.
+- Gemini research intake note capturing verified leads versus claims still requiring primary-source confirmation.
+- Gemini reference-verification intake note with promoted follow-up leads for debugger, Zelda, Metroid, and SMW lanes.
 - Nested git repository for `snes/`.
 
 ### Changed

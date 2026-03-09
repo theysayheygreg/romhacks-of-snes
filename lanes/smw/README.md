@@ -25,6 +25,7 @@ Current lane artifacts:
 - `./BACKLOG.md`
 - `./lunar-magic-01.md`
 - `./callisto-01.md`
+- `./workflow-model-01.md`
 
 Current status:
 
@@ -39,6 +40,7 @@ Use this lane for future additions like:
 - SMW source/disassembly notes
 - Lunar Magic tool notes
 - build-system and orchestration notes
+- workflow model notes
 - SMW ROM fingerprint notes
 - RAM/SRAM and patch-anchor maps
 - Lunar Magic workflow notes

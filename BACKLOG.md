@@ -54,6 +54,8 @@ Lane-specific work lives in:
   - Use the workspace prompt in `docs/gemini-deep-research-prompt.md`.
   - Focus on YouTube videos, talks, archived threads, and long-form community posts.
   - Distill the results back into durable notes rather than keeping them as a raw dump.
+  - [x] Distill the first Gemini brief into `docs/gemini-research-intake-001.md`.
+  - [x] Distill the first Gemini reference-verification brief into `docs/gemini-reference-verification-intake-001.md`.
 
 ## Next
 
@@ -73,6 +75,20 @@ Lane-specific work lives in:
   - Which ROM revisions each tool or editor expects
   - Which tools are exact-match source lanes versus multi-version lanes
   - Which workflows are Mac-native, Windows-assisted, or emulator-specific
+
+- [ ] Verify Gemini-surfaced external references before promoting them to canonical docs
+  - debugger lanes like `bsnes-plus` and `Mesen-S`
+  - historical Zelda and Metroid disassembly references
+  - SMW project-template and other build-pipeline references
+  - compare `Mesen 2`, `bsnes-plus`, and `bsnes`
+  - evaluate `JaredBrian/AsarUSALTTPDisassembly`, `alttp.run`, and `yaze`
+  - evaluate `InsaneFirebat/sm_disassembly`
+  - evaluate `smw-project-template`
+
+- [ ] Research multiworld / Archipelago-style crossover synchronization
+  - understand protocol shape and state sync assumptions
+  - decide whether this is relevant to future crossover ideas or only adjacent inspiration
+  - [x] Produce one first-pass shared note on multiworld relevance.
 
 - [ ] Build a “safe first mods” cookbook
   - One low-risk patch example for Zelda

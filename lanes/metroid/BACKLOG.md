@@ -39,3 +39,13 @@ This backlog is for Super Metroid-specific work inside the SNES workspace.
   - Low-risk ROM edits
   - Compression/decompression touchpoints
   - Save-state or SRAM-adjacent systems worth understanding
+
+- [ ] Document the PLM execution model
+  - [x] Produce one first-pass structural note for PLMs and room states.
+  - what Bank `84` owns
+  - how room-loaded interactivity is updated
+  - how that connects to item and door behavior
+
+- [ ] Evaluate `InsaneFirebat/sm_disassembly`
+  - how it compares to `strager/supermetroid`
+  - whether it should become a second modern Metroid source lane

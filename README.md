@@ -24,6 +24,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `repos/MapRandomizer`: Super Metroid map/room-connectivity randomizer stack
 - `repos/SMWDisX`: multi-version Super Mario World disassembly/rebuild source lane
 - `repos/callisto`: Super Mario World project build-system and orchestration lane
+- `repos/multirando-asm`: four-game crossover randomizer / architecture repo for SM, ALTTP, Zelda 1, and Metroid 1
 
 ## Layout
 
@@ -48,13 +49,20 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `docs/research-resource-index.md`: curated external resource list for general SNES hacking and the three anchor games
 - `docs/game-design-three-anchors.md`: comparative design and mechanics note for Zelda 3, Super Metroid, and SMW
 - `docs/gemini-deep-research-prompt.md`: reusable prompt for broader Gemini research across videos and community materials
+- `docs/gemini-followup-prompts-001.md`: focused Gemini prompts for verification and game-specific follow-up research
+- `docs/gemini-research-intake-001.md`: distilled intake note from the first Gemini deep-research brief
+- `docs/gemini-reference-verification-intake-001.md`: distilled intake note from the first Gemini reference-verification brief
+- `docs/multiworld-architecture-01.md`: first shared note on Archipelago-style multiworld relevance for the workspace
 - `docs/external-research/`: landing zone for externally generated research briefs before distillation
 - `WORKSPACE-STRUCTURE.md`: how shared SNES knowledge and per-project swim lanes are organized
 - `lanes/zelda/vanilla-deep-dive-01.md`: first practical vanilla Zelda 3 reverse-engineering note
 - `lanes/metroid/vanilla-deep-dive-01.md`: first practical vanilla Super Metroid reverse-engineering note
+- `lanes/metroid/plm-room-state-01.md`: first structural note on PLMs and room-state data in Super Metroid
 - `lanes/smw/INTAKE.md`: intake checklist for standing up the SMW lane with a base ROM and repos
 - `lanes/smw/lunar-magic-01.md`: local Lunar Magic tooling classification and supported-ROM notes
 - `lanes/smw/callisto-01.md`: Callisto build-system classification and workflow notes
+- `lanes/smw/workflow-model-01.md`: first canonical workflow model note for the SMW lane
+- `lanes/smz3/multirando-asm-01.md`: crossover note on the four-game `multirando-asm` architecture repo
 
 ## Notes
 
@@ -64,6 +72,9 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - The macOS toolchain is now documented in `docs/macos-toolchain.md`.
 - The current external resource pass is curated in `docs/research-resource-index.md`.
 - The current comparative design note for the three anchor games lives in `docs/game-design-three-anchors.md`.
+- The first Gemini brief has been distilled into `docs/gemini-research-intake-001.md`.
+- The first Gemini reference-verification brief has been distilled into `docs/gemini-reference-verification-intake-001.md`.
+- The current multiworld relevance note lives in `docs/multiworld-architecture-01.md`.
 - `snes/` is now a standalone git repository for the workspace itself.
 - Verified locally on this Mac:
   - `bsnes` source build
@@ -71,6 +82,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
   - `MapRandomizer` Rust workspace check after submodule hydration
   - `z3randomizer` patch-first ROM generation
 - The current Metroid anchor note lives in `lanes/metroid/vanilla-deep-dive-01.md`.
+- The current Metroid PLM/state companion note lives in `lanes/metroid/plm-room-state-01.md`.
 - The current Zelda anchor note lives in `lanes/zelda/vanilla-deep-dive-01.md`.
 - The SMW lane is now active enough to collect a base ROM, repos, and ecosystem notes instead of staying a pure stub.
 - `repos/supermetroid` exactly matches the local Super Metroid ROM by SHA-1 and is now the canonical Metroid source-reference lane.
