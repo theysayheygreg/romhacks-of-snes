@@ -1,0 +1,15 @@
+# Clean ROMs and generated outputs
+roms/base/*.sfc
+roms/base/*.smc
+build/*
+!build/README.md
+
+# Ingested upstream repos stay as external references
+repos/
+
+# Platform-specific and editor noise
+.DS_Store
+*.app
+*.log
+*.tmp
+*.swp

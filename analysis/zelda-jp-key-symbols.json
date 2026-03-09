@@ -1,0 +1,50 @@
+{
+  "rom_sha1": "e7e852f0159ce612e3911164878a9b08b3cb9060",
+  "rom_md5": "03a63945398191337e896e5771f77173",
+  "mapping": "LoROM",
+  "speed": "SlowROM",
+  "native_reset_vector_snes": "0x808000",
+  "canonical_source_lane": "jpdasm",
+  "wram_anchors": {
+    "MODE": "0x7E0010",
+    "SUBMODE": "0x7E0011",
+    "LAG": "0x7E0012",
+    "FRAME": "0x7E001A",
+    "INDOORS": "0x7E001B",
+    "POSY": "0x7E0020",
+    "POSX": "0x7E0022",
+    "LDIR": "0x7E002F"
+  },
+  "sram_anchors": {
+    "FILE1MAIN": "0x700000",
+    "FILE2MAIN": "0x700500",
+    "FILE3MAIN": "0x700A00",
+    "FILE1COPY": "0x700F00",
+    "FILE2COPY": "0x701400",
+    "FILE3COPY": "0x701900",
+    "ROOM_FLAGS_WRAM_START": "0x7EF000"
+  },
+  "patch_first_wram_anchors": {
+    "RoomDataWRAM": "0x7EF000",
+    "OverworldEventDataWRAM": "0x7EF280",
+    "InventoryTracking": "0x7EF38C",
+    "ProgressIndicator": "0x7EF3C5",
+    "CurrentWorld": "0x7EF3CA",
+    "FollowerIndicator": "0x7EF3CC"
+  },
+  "patch_hook_anchors_snes": {
+    "InitHook": "0x80802F",
+    "FrameHook": "0x808056",
+    "NMIHook": "0x8080CC",
+    "AntiZSNESHook": "0x808023"
+  },
+  "config_table_pc_anchors": {
+    "SpriteItemValues": "0x180010",
+    "DiggingGameRNG": "0x180020",
+    "MireRequiredMedallion": "0x180022",
+    "TRockRequiredMedallion": "0x180023",
+    "MapMode": "0x18003B",
+    "HUDDungeonItems": "0x180045",
+    "RomSpeed": "0x187032"
+  }
+}

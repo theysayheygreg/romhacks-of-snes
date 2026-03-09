@@ -1,0 +1,435 @@
+{
+  "nodes": [
+    {
+      "id": "snes_hardware",
+      "type": "platform",
+      "label": "Super Nintendo / Super Famicom"
+    },
+    {
+      "id": "cpu_5a22",
+      "type": "hardware",
+      "label": "5A22 main CPU"
+    },
+    {
+      "id": "ppu",
+      "type": "hardware",
+      "label": "PPU subsystem"
+    },
+    {
+      "id": "apu_spc700",
+      "type": "hardware",
+      "label": "SPC700 + DSP audio subsystem"
+    },
+    {
+      "id": "wram",
+      "type": "hardware",
+      "label": "WRAM"
+    },
+    {
+      "id": "lorom",
+      "type": "mapping",
+      "label": "LoROM"
+    },
+    {
+      "id": "hirom",
+      "type": "mapping",
+      "label": "HiROM"
+    },
+    {
+      "id": "fastrom",
+      "type": "mapping",
+      "label": "FastROM"
+    },
+    {
+      "id": "snes9x",
+      "type": "tool",
+      "label": "snes9x",
+      "path": "repos/snes9x"
+    },
+    {
+      "id": "bsnes",
+      "type": "tool",
+      "label": "bsnes",
+      "path": "repos/bsnes"
+    },
+    {
+      "id": "diz",
+      "type": "tool",
+      "label": "DiztinGUIsh",
+      "path": "repos/DiztinGUIsh"
+    },
+    {
+      "id": "snestistics",
+      "type": "tool",
+      "label": "snestistics",
+      "path": "repos/snestistics"
+    },
+    {
+      "id": "sd2snes",
+      "type": "tool",
+      "label": "sd2snes",
+      "path": "repos/sd2snes"
+    },
+    {
+      "id": "smz3",
+      "type": "project",
+      "label": "SMZ3 Randomizer",
+      "path": "repos/SMZ3"
+    },
+    {
+      "id": "jpdasm",
+      "type": "project",
+      "label": "ALTTP JP1.0 Disassembly",
+      "path": "repos/jpdasm"
+    },
+    {
+      "id": "z3randomizer",
+      "type": "project",
+      "label": "ALTTP Randomizer Patch Base",
+      "path": "repos/z3randomizer"
+    },
+    {
+      "id": "alttp_vt_randomizer",
+      "type": "project",
+      "label": "ALTTP VT Randomizer",
+      "path": "repos/alttp_vt_randomizer"
+    },
+    {
+      "id": "alttp_door_randomizer",
+      "type": "project",
+      "label": "ALTTP Door Randomizer",
+      "path": "repos/ALttPDoorRandomizer"
+    },
+    {
+      "id": "random_metroid_solver",
+      "type": "project",
+      "label": "VARIA Randomizer / Solver",
+      "path": "repos/RandomMetroidSolver"
+    },
+    {
+      "id": "map_randomizer",
+      "type": "project",
+      "label": "Super Metroid Map Randomizer",
+      "path": "repos/MapRandomizer"
+    },
+    {
+      "id": "smwdisx",
+      "type": "project",
+      "label": "SMWDisX",
+      "path": "repos/SMWDisX"
+    },
+    {
+      "id": "callisto",
+      "type": "project",
+      "label": "Callisto",
+      "path": "repos/callisto"
+    },
+    {
+      "id": "super_metroid",
+      "type": "rom",
+      "label": "Super Metroid (Japan, USA) (En,Ja).sfc",
+      "analysis": "analysis/super-metroid-rom.json"
+    },
+    {
+      "id": "zelda3_jp",
+      "type": "rom",
+      "label": "Zelda no Densetsu - Kamigami no Triforce (Japan).sfc",
+      "analysis": "analysis/zelda-jp-rom.json"
+    },
+    {
+      "id": "smw_usa",
+      "type": "rom",
+      "label": "Super Mario World (USA).sfc",
+      "analysis": "analysis/super-mario-world-usa-rom.json"
+    },
+    {
+      "id": "lunar_magic",
+      "type": "external_tool",
+      "label": "Lunar Magic",
+      "url": "https://fusoya.eludevisibility.org/lm/"
+    },
+    {
+      "id": "snesdev_wiki",
+      "type": "external_doc",
+      "label": "SNESdev Wiki",
+      "url": "https://snes.nesdev.org/wiki/SNESdev_Wiki"
+    },
+    {
+      "id": "snes_development_manual",
+      "type": "external_doc",
+      "label": "SNES Development Manual",
+      "url": "https://snes.nesdev.org/wiki/SNES_Development_Manual"
+    },
+    {
+      "id": "sneslab_programming_guide",
+      "type": "external_doc",
+      "label": "SnesLab Programming Guide",
+      "url": "https://sneslab.net/wiki/Programming_guide"
+    },
+    {
+      "id": "fullsnes",
+      "type": "external_doc",
+      "label": "fullsnes",
+      "url": "https://problemkaputt.de/fullsnes.htm"
+    },
+    {
+      "id": "asar_manual",
+      "type": "external_doc",
+      "label": "Asar User Manual",
+      "url": "https://rpghacker.github.io/asar/asar_19/manual/"
+    },
+    {
+      "id": "flips",
+      "type": "external_tool",
+      "label": "Floating IPS / Flips",
+      "url": "https://github.com/Alcaro/Flips"
+    },
+    {
+      "id": "alttphacking",
+      "type": "external_community",
+      "label": "ALTTPHacking.net",
+      "url": "https://alttphacking.net/"
+    },
+    {
+      "id": "alttpr_site",
+      "type": "external_community",
+      "label": "ALttP Randomizer",
+      "url": "https://alttpr.com/"
+    },
+    {
+      "id": "smmm",
+      "type": "external_doc",
+      "label": "Super Metroid Mod Manual",
+      "url": "https://metroidconstruction.com/SMMM/"
+    },
+    {
+      "id": "varia_info",
+      "type": "external_community",
+      "label": "VARIA Randomizer Infos",
+      "url": "https://randommetroidsolver.pythonanywhere.com/infos"
+    },
+    {
+      "id": "smw_central",
+      "type": "external_community",
+      "label": "SMW Central",
+      "url": "https://www.smwcentral.net/"
+    }
+  ],
+  "edges": [
+    {
+      "from": "snes_hardware",
+      "to": "cpu_5a22",
+      "relation": "contains"
+    },
+    {
+      "from": "snes_hardware",
+      "to": "ppu",
+      "relation": "contains"
+    },
+    {
+      "from": "snes_hardware",
+      "to": "apu_spc700",
+      "relation": "contains"
+    },
+    {
+      "from": "snes_hardware",
+      "to": "wram",
+      "relation": "contains"
+    },
+    {
+      "from": "snes_hardware",
+      "to": "lorom",
+      "relation": "uses_mapping"
+    },
+    {
+      "from": "snes_hardware",
+      "to": "hirom",
+      "relation": "uses_mapping"
+    },
+    {
+      "from": "lorom",
+      "to": "fastrom",
+      "relation": "can_be_flagged_as"
+    },
+    {
+      "from": "snes9x",
+      "to": "snes_hardware",
+      "relation": "emulates"
+    },
+    {
+      "from": "bsnes",
+      "to": "snes_hardware",
+      "relation": "emulates"
+    },
+    {
+      "from": "diz",
+      "to": "bsnes",
+      "relation": "captures_trace_from"
+    },
+    {
+      "from": "snestistics",
+      "to": "snes9x",
+      "relation": "derives_from_or_depends_on"
+    },
+    {
+      "from": "sd2snes",
+      "to": "snes_hardware",
+      "relation": "deploys_to"
+    },
+    {
+      "from": "super_metroid",
+      "to": "lorom",
+      "relation": "maps_as"
+    },
+    {
+      "from": "super_metroid",
+      "to": "fastrom",
+      "relation": "uses_speed_flag"
+    },
+    {
+      "from": "zelda3_jp",
+      "to": "lorom",
+      "relation": "maps_as"
+    },
+    {
+      "from": "smz3",
+      "to": "super_metroid",
+      "relation": "uses_as_base_rom"
+    },
+    {
+      "from": "smz3",
+      "to": "zelda3_jp",
+      "relation": "uses_as_base_rom"
+    },
+    {
+      "from": "jpdasm",
+      "to": "zelda3_jp",
+      "relation": "disassembles"
+    },
+    {
+      "from": "z3randomizer",
+      "to": "zelda3_jp",
+      "relation": "patches"
+    },
+    {
+      "from": "alttp_vt_randomizer",
+      "to": "zelda3_jp",
+      "relation": "randomizes_from_base_rom"
+    },
+    {
+      "from": "alttp_door_randomizer",
+      "to": "zelda3_jp",
+      "relation": "randomizes_from_base_rom"
+    },
+    {
+      "from": "random_metroid_solver",
+      "to": "super_metroid",
+      "relation": "randomizes_from_base_rom"
+    },
+    {
+      "from": "map_randomizer",
+      "to": "super_metroid",
+      "relation": "randomizes_from_base_rom"
+    },
+    {
+      "from": "smz3",
+      "to": "z3randomizer",
+      "relation": "inherits_or_parallels_randomizer_patterns_from"
+    },
+    {
+      "from": "smz3",
+      "to": "random_metroid_solver",
+      "relation": "inherits_or_parallels_randomizer_patterns_from"
+    },
+    {
+      "from": "smz3",
+      "to": "alttp_door_randomizer",
+      "relation": "is_adjacent_to_randomizer_ecosystem_of"
+    },
+    {
+      "from": "smz3",
+      "to": "sd2snes",
+      "relation": "targets_runtime_on"
+    },
+    {
+      "from": "lunar_magic",
+      "to": "smw_central",
+      "relation": "ecosystem_peer"
+    },
+    {
+      "from": "smwdisx",
+      "to": "smw_usa",
+      "relation": "assembles_or_documents_versions_of"
+    },
+    {
+      "from": "callisto",
+      "to": "smw_usa",
+      "relation": "builds_from_base_rom"
+    },
+    {
+      "from": "lunar_magic",
+      "to": "smw_usa",
+      "relation": "edits"
+    },
+    {
+      "from": "snesdev_wiki",
+      "to": "snes_hardware",
+      "relation": "documents"
+    },
+    {
+      "from": "snes_development_manual",
+      "to": "snes_hardware",
+      "relation": "documents"
+    },
+    {
+      "from": "sneslab_programming_guide",
+      "to": "snes_hardware",
+      "relation": "documents"
+    },
+    {
+      "from": "fullsnes",
+      "to": "snes_hardware",
+      "relation": "documents"
+    },
+    {
+      "from": "asar_manual",
+      "to": "z3randomizer",
+      "relation": "documents_tooling_for"
+    },
+    {
+      "from": "asar_manual",
+      "to": "smwdisx",
+      "relation": "documents_tooling_for"
+    },
+    {
+      "from": "flips",
+      "to": "callisto",
+      "relation": "supports_patch_workflow_for"
+    },
+    {
+      "from": "alttphacking",
+      "to": "zelda3_jp",
+      "relation": "community_for"
+    },
+    {
+      "from": "alttpr_site",
+      "to": "zelda3_jp",
+      "relation": "randomizer_community_for"
+    },
+    {
+      "from": "smmm",
+      "to": "super_metroid",
+      "relation": "hacking_guide_for"
+    },
+    {
+      "from": "varia_info",
+      "to": "super_metroid",
+      "relation": "randomizer_community_for"
+    },
+    {
+      "from": "smw_central",
+      "to": "smw_usa",
+      "relation": "community_for"
+    }
+  ]
+}

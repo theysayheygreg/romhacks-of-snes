@@ -1,0 +1,26 @@
+{
+  "boot_reset_vector_snes": "0x80841C",
+  "boot_label": "Boot",
+  "start_location_pc": "0xA1F200",
+  "startup_pc": "0xA1F220",
+  "starting_energy_pc": "0xA1F470",
+  "escape_timer_snes": "0x809E21",
+  "escape_timer_table_pc": "0xA1F0D0",
+  "plm_lists_snes": "0x8FE9BF",
+  "room_plms_upwards_snes": "0x8FF000",
+  "scav_order_pc": "0xA1F560",
+  "seed_display_info_string_snes": "0x82FB6C",
+  "sample_item_plm_offsets_pc": {
+    "Bombs": "0x78404",
+    "Morphing Ball": "0x786DE",
+    "Power Bomb (blue Brinstar)": "0x7874C",
+    "Reserve Tank, Wrecked Ship": "0x7C2E9"
+  },
+  "sample_room_pointers_snes": {
+    "Lower Mushrooms Left": "0x9969",
+    "Morph Ball Room Left": "0x9E9F",
+    "Green Hill Zone Top Right": "0x9E52",
+    "PhantoonRoomOut": "0xCC6F",
+    "Lava Dive Right": "0xAF14"
+  }
+}
