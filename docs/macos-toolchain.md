@@ -40,6 +40,19 @@ Verified output:
 
 - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/bsnes/bsnes/out/bsnes.app`
 
+Current caveat on this Apple Silicon Mac:
+
+- native `arm64` `bsnes` builds currently boot ROMs with working audio but black video
+- upstream has a matching open issue: `bsnes-emu/bsnes#320`
+- the macOS build only exposes the `OpenGL 3.2` video backend here; there is no Metal fallback in this codebase
+- the current official nightly macOS asset also resolves to an `arm64` binary, so it reproduces the same failure
+- a clean `x86_64` test build was produced as a likely Rosetta workaround:
+  - `/Users/theysayheygreg/Documents/SNES/emulators/bsnes-x86_64-20260309.app`
+
+See also:
+
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/docs/bsnes-macos-rendering-01.md`
+
 ### SMZ3 CLI
 
 `SMZ3` targets `net7.0`. It builds with the `.NET 9` SDK here, but launching the built binary currently requires major-version runtime roll-forward.

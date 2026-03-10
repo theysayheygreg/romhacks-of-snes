@@ -55,6 +55,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `docs/gemini-reference-verification-intake-001.md`: distilled intake note from the first Gemini reference-verification brief
 - `docs/multiworld-architecture-01.md`: first shared note on Archipelago-style multiworld relevance for the workspace
 - `docs/emulator-testing-layout.md`: local testing-folder layout and emulator path conventions
+- `docs/bsnes-macos-rendering-01.md`: investigation note for the current Apple Silicon `bsnes` black-video issue
 - `docs/external-research/`: landing zone for externally generated research briefs before distillation
 - `WORKSPACE-STRUCTURE.md`: how shared SNES knowledge and per-project swim lanes are organized
 - `lanes/zelda/vanilla-deep-dive-01.md`: first practical vanilla Zelda 3 reverse-engineering note
@@ -75,6 +76,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - Clean base ROMs are now staged under `roms/base/` and should be used instead of the iCloud originals.
 - Generated local outputs live under `build/`, with conventions documented in `build/README.md`.
 - The macOS toolchain is now documented in `docs/macos-toolchain.md`.
+- The current `bsnes` Apple Silicon rendering issue and workaround lane are captured in `docs/bsnes-macos-rendering-01.md`.
 - The current external resource pass is curated in `docs/research-resource-index.md`.
 - The current comparative design note for the three anchor games lives in `docs/game-design-three-anchors.md`.
 - The first Gemini brief has been distilled into `docs/gemini-research-intake-001.md`.

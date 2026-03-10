@@ -31,3 +31,4 @@ Flow:
 - Validated `smw-project-template` as the first modern SMW starter/template lane and aligned it with the existing Callisto model.
 - Produced the first standalone SMW ROM artifact with a checksum-fixed patch-first workflow.
 - Added a Documents-based emulator testing layout plus a sync script for curating GUI-emulator-ready ROM symlinks.
+- Investigated the current `bsnes` black-video issue on this Apple Silicon Mac, tied it to an upstream macOS/OpenGL issue, and produced a clean `x86_64` Rosetta test app as the next validation step.
