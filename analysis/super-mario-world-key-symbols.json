@@ -1,0 +1,140 @@
+{
+  "rom": {
+    "name": "Super Mario World (USA).sfc",
+    "path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/roms/base/Super Mario World (USA).sfc",
+    "mapping": "LoROM",
+    "speed": "SlowROM",
+    "file_size_bytes": 524288,
+    "native_reset_vector": "80:8000",
+    "exact_smwdisx_match": "unverified",
+    "primary_source_lane": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/SMWDisX"
+  },
+  "rom_symbols": {
+    "RunGameMode": {
+      "rom_address": "00:9322",
+      "role": "main game-mode dispatch"
+    },
+    "FinishGameMode": {
+      "rom_address": "00:941A",
+      "role": "mode finalization helper"
+    },
+    "GM03LoadTitleScreen": {
+      "rom_address": "00:96AE",
+      "role": "title-screen load path"
+    },
+    "InitSaveData": {
+      "rom_address": "00:9F06",
+      "role": "save-file initialization"
+    },
+    "GivePlayerLives": {
+      "rom_address": "00:18E4",
+      "role": "life-award accumulation"
+    }
+  },
+  "wram_symbols": {
+    "TrueFrame": {
+      "wram_address": "7E:0013",
+      "role": "frame counter"
+    },
+    "EffFrame": {
+      "wram_address": "7E:0014",
+      "role": "unpaused frame counter"
+    },
+    "Powerup": {
+      "wram_address": "7E:0019",
+      "role": "current player powerup"
+    },
+    "GameMode": {
+      "wram_address": "7E:0100",
+      "role": "high-level engine state"
+    },
+    "SavedPlayerLives": {
+      "wram_address": "7E:0DB4",
+      "role": "two-player life carryover"
+    },
+    "PlayerLives": {
+      "wram_address": "7E:0DBE",
+      "role": "active player lives"
+    },
+    "Map16Pointers": {
+      "wram_address": "7E:0FBE",
+      "role": "runtime Map16 pointer table"
+    },
+    "TranslevelNo": {
+      "wram_address": "7E:13BF",
+      "role": "current translevel identifier"
+    },
+    "OverworldEvent": {
+      "wram_address": "7E:1DEA",
+      "role": "current overworld event index"
+    },
+    "SaveDataBuffer": {
+      "wram_address": "7E:1F49",
+      "role": "working save-buffer copy"
+    }
+  },
+  "sram_symbols": {
+    "SaveData": {
+      "sram_address": "70:0000",
+      "role": "file 1 save payload"
+    },
+    "SaveDataExitCount": {
+      "sram_address": "70:008C",
+      "role": "file 1 exit count"
+    },
+    "SaveDataChecksum": {
+      "sram_address": "70:008D",
+      "role": "file 1 checksum"
+    },
+    "SaveDataFile2": {
+      "sram_address": "70:008F",
+      "role": "file 2 save payload"
+    },
+    "SaveDataFile3": {
+      "sram_address": "70:011E",
+      "role": "file 3 save payload"
+    },
+    "SaveDataBackup": {
+      "sram_address": "70:01AD",
+      "role": "backup copies for all files"
+    }
+  },
+  "notable_constants": {
+    "SaveFileSize": 143,
+    "MaximumLives": 99,
+    "TitleScreenLevel": "0xC7",
+    "MainMapLevels": 36
+  },
+  "patch_surfaces": [
+    {
+      "name": "internal_rom_title",
+      "address": "00:FFC0",
+      "risk": "low",
+      "notes": "Header-only identity patch surface"
+    },
+    {
+      "name": "game_mode_dispatch",
+      "address": "00:9322",
+      "risk": "medium",
+      "notes": "Global engine-state hook surface"
+    },
+    {
+      "name": "title_screen_load_path",
+      "address": "00:96AE",
+      "risk": "medium",
+      "notes": "Controls title-screen level bootstrap"
+    },
+    {
+      "name": "save_data_init",
+      "address": "00:9F06",
+      "risk": "medium",
+      "notes": "Useful for default-file or boot-state changes"
+    },
+    {
+      "name": "life_award_logic",
+      "address": "00:18E4",
+      "risk": "low",
+      "notes": "Narrow gameplay tweak surface"
+    }
+  ]
+}

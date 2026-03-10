@@ -24,6 +24,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `repos/MapRandomizer`: Super Metroid map/room-connectivity randomizer stack
 - `repos/SMWDisX`: multi-version Super Mario World disassembly/rebuild source lane
 - `repos/callisto`: Super Mario World project build-system and orchestration lane
+- `repos/smw-project-template`: Super Mario World starter/template lane built around Callisto
 - `repos/multirando-asm`: four-game crossover randomizer / architecture repo for SM, ALTTP, Zelda 1, and Metroid 1
 
 ## Layout
@@ -62,6 +63,9 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `lanes/smw/lunar-magic-01.md`: local Lunar Magic tooling classification and supported-ROM notes
 - `lanes/smw/callisto-01.md`: Callisto build-system classification and workflow notes
 - `lanes/smw/workflow-model-01.md`: first canonical workflow model note for the SMW lane
+- `lanes/smw/vanilla-deep-dive-01.md`: first practical vanilla SMW reverse-engineering note
+- `lanes/smw/smw-project-template-01.md`: first classification note for the modern SMW template/starter lane
+- `lanes/smw/standalone-rom-01.md`: first standalone SMW ROM artifact note
 - `lanes/smz3/multirando-asm-01.md`: crossover note on the four-game `multirando-asm` architecture repo
 
 ## Notes
@@ -84,7 +88,8 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - The current Metroid anchor note lives in `lanes/metroid/vanilla-deep-dive-01.md`.
 - The current Metroid PLM/state companion note lives in `lanes/metroid/plm-room-state-01.md`.
 - The current Zelda anchor note lives in `lanes/zelda/vanilla-deep-dive-01.md`.
-- The SMW lane is now active enough to collect a base ROM, repos, and ecosystem notes instead of staying a pure stub.
+- The current SMW anchor note lives in `lanes/smw/vanilla-deep-dive-01.md`.
+- The SMW lane now has its first standalone ROM artifact and starter-template classification.
 - `repos/supermetroid` exactly matches the local Super Metroid ROM by SHA-1 and is now the canonical Metroid source-reference lane.
 - `repos/jpdasm` exactly matches the local Zelda JP ROM by SHA-1/MD5 and is the canonical Zelda source-reference lane.
 - This workspace is SNES-only. Non-SNES reverse-engineering work should live in a separate workspace.

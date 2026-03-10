@@ -93,7 +93,7 @@ Lane-specific work lives in:
 - [ ] Build a “safe first mods” cookbook
   - One low-risk patch example for Zelda
   - One low-risk patch example for Super Metroid
-  - One low-risk patch or editor-driven modification for SMW
+  - [x] One low-risk patch or editor-driven modification for SMW
 
 - [ ] Add a hardware deployment note for `sd2snes`
   - Feature support boundaries

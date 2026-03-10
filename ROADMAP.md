@@ -225,6 +225,13 @@ Tasks:
 - build a comparative design note across Zelda, Metroid, and SMW that is explicit about progression grammar and modifiable levers
 - turn the staged SMW base ROM into a first deep-dive and compatibility anchor for `SMWDisX`, Lunar Magic, and `callisto`
 
+Current status:
+
+- the SMW lane is active and anchored on the staged U ROM
+- `SMWDisX`, Lunar Magic, `callisto`, and `smw-project-template` are all classified
+- the first SMW deep-dive note exists
+- the first low-risk standalone SMW ROM artifact exists
+
 Exit criteria:
 
 - one doc connecting community workflow patterns to this workspace's tooling strategy

@@ -27,3 +27,6 @@ Flow:
 - Ingested the Gemini SMW pipeline brief and turned it into a first-pass canonical SMW workflow model with explicit open verification points.
 - Ingested `multirando-asm` as a second major crossover example, broadening the crossover lane from two-game `SMZ3` thinking toward four-game composite-ROM architecture.
 - Ingested the Gemini multiworld brief and turned it into a first shared note on why Archipelago-style models matter architecturally without making them a near-term implementation target.
+- Completed the first vanilla SMW deep-dive pass with a symbol map, game-mode anchor, and WRAM/SRAM patch surfaces.
+- Validated `smw-project-template` as the first modern SMW starter/template lane and aligned it with the existing Callisto model.
+- Produced the first standalone SMW ROM artifact with a checksum-fixed patch-first workflow.

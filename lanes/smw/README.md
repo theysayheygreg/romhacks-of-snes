@@ -26,23 +26,30 @@ Current lane artifacts:
 - `./lunar-magic-01.md`
 - `./callisto-01.md`
 - `./workflow-model-01.md`
+- `./vanilla-deep-dive-01.md`
+- `./smw-project-template-01.md`
+- `./standalone-rom-01.md`
 
 Current status:
 
-- active intake lane
+- active analysis lane
 - first source lane ingested via `SMWDisX`
 - first build/orchestration lane ingested via `callisto`
+- first template/starter lane validated via `smw-project-template`
 - first base ROM staged locally and fingerprinted
-- awaiting broader repo/tool set and the first deep-dive pass
+- first vanilla deep-dive pass completed
+- first standalone SMW ROM artifact produced via a low-risk patch-first lane
 
 Use this lane for future additions like:
 
 - SMW source/disassembly notes
 - Lunar Magic tool notes
 - build-system and orchestration notes
+- template/starter workflow notes
 - workflow model notes
 - SMW ROM fingerprint notes
 - RAM/SRAM and patch-anchor maps
+- standalone ROM artifact notes
 - Lunar Magic workflow notes
 - ASM insertion and freespace conventions
 
