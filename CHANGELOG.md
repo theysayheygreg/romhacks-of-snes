@@ -25,6 +25,7 @@ It is not a full session transcript.
 - First-pass canonical vanilla SMW deep-dive note and key-symbol map.
 - First SMW template/starter-lane classification note for `smw-project-template`.
 - First standalone SMW ROM artifact note and helper patch script.
+- Emulator testing layout note and a sync script for a Documents-based shared load folder.
 - First-pass canonical Metroid PLM and room-state note.
 - `multirando-asm` crossover note and knowledge-graph expansion for four-game composite-ROM architecture.
 - First shared note on multiworld / Archipelago-style architectural relevance.
@@ -47,3 +48,4 @@ It is not a full session transcript.
 - `z3randomizer` patch-first ROM generation path.
 - `smw-project-template` repo identity and workflow shape against the current SMW lane model.
 - Standalone SMW patch-first ROM generation via bundled Asar with checksum repair.
+- `bsnes` path layout against a unified `~/Documents/SNES/` testing directory.

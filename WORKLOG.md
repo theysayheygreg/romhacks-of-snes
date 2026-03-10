@@ -30,3 +30,4 @@ Flow:
 - Completed the first vanilla SMW deep-dive pass with a symbol map, game-mode anchor, and WRAM/SRAM patch surfaces.
 - Validated `smw-project-template` as the first modern SMW starter/template lane and aligned it with the existing Callisto model.
 - Produced the first standalone SMW ROM artifact with a checksum-fixed patch-first workflow.
+- Added a Documents-based emulator testing layout plus a sync script for curating GUI-emulator-ready ROM symlinks.

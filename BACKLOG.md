@@ -85,6 +85,11 @@ Lane-specific work lives in:
   - evaluate `InsaneFirebat/sm_disassembly`
   - evaluate `smw-project-template`
 
+- [ ] Document emulator working-directory and path behavior
+  - capture `bsnes` app-level config/support paths and per-game path behavior
+  - inspect the local `snes9x` build for equivalent config/save/state paths
+  - decide whether the workspace wants launcher/helper scripts for consistent ROM testing
+
 - [ ] Research multiworld / Archipelago-style crossover synchronization
   - understand protocol shape and state sync assumptions
   - decide whether this is relevant to future crossover ideas or only adjacent inspiration

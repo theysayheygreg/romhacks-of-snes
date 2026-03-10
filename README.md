@@ -54,6 +54,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `docs/gemini-research-intake-001.md`: distilled intake note from the first Gemini deep-research brief
 - `docs/gemini-reference-verification-intake-001.md`: distilled intake note from the first Gemini reference-verification brief
 - `docs/multiworld-architecture-01.md`: first shared note on Archipelago-style multiworld relevance for the workspace
+- `docs/emulator-testing-layout.md`: local testing-folder layout and emulator path conventions
 - `docs/external-research/`: landing zone for externally generated research briefs before distillation
 - `WORKSPACE-STRUCTURE.md`: how shared SNES knowledge and per-project swim lanes are organized
 - `lanes/zelda/vanilla-deep-dive-01.md`: first practical vanilla Zelda 3 reverse-engineering note
