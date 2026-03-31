@@ -76,3 +76,31 @@ For this Mac:
 - treat native `arm64` `bsnes` GUI builds as currently unreliable for runtime video testing
 - test the `x86_64` Rosetta build next
 - if that still fails, prefer `snes9x` as the pragmatic emulator lane and real hardware via `sd2snes` as final truth
+
+## Local Metal patch lane
+
+This workspace now also has a native Metal backend patch in the local `bsnes` source repo:
+
+- repo: `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/bsnes`
+- branch: `codex/metal-macos`
+- commit: `afc9e74` (`Add Metal video driver for macOS`)
+
+Current shape of the patch:
+
+- adds a new macOS `ruby/video` backend named `Metal`
+- keeps the existing OpenGL backend in place as a secondary option
+- makes `Metal` the preferred macOS driver
+- migrates existing macOS `OpenGL 3.2` settings to `Metal` on load
+- supports the common shader settings path as:
+  - `None` -> nearest-neighbor sampling
+  - `Blur` -> linear sampling
+
+Staged patched app for testing:
+
+- `/Users/theysayheygreg/Documents/SNES/emulators/bsnes-metal-20260331.app`
+
+Important status:
+
+- the patched app builds cleanly
+- the backend is not yet manually runtime-verified in the GUI
+- the next required step is to launch the staged app and confirm that video renders on this Apple Silicon Mac

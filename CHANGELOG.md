@@ -28,6 +28,7 @@ It is not a full session transcript.
 - Emulator testing layout note and a sync script for a Documents-based shared load folder.
 - `bsnes` macOS rendering investigation note and an `x86_64` Rosetta workaround lane.
 - `snes9x` macOS practical-lane note and staged release app path.
+- Local `bsnes` Metal-backend patch lane and staged patched app path.
 - First-pass canonical Metroid PLM and room-state note.
 - `multirando-asm` crossover note and knowledge-graph expansion for four-game composite-ROM architecture.
 - First shared note on multiworld / Archipelago-style architectural relevance.
@@ -53,3 +54,4 @@ It is not a full session transcript.
 - `bsnes` path layout against a unified `~/Documents/SNES/` testing directory.
 - The current upstream `bsnes` nightly macOS asset architecture and the locally built `x86_64` Rosetta test app shape for the Apple Silicon rendering issue.
 - The official `snes9x` macOS release app source URL, architecture shape, and expected app data/config roots.
+- Clean local `bsnes` Metal-backend build on macOS and automatic migration from `OpenGL 3.2` settings to `Metal`.
