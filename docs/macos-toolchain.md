@@ -50,7 +50,9 @@ Current caveat on this Apple Silicon Mac:
   - `/Users/theysayheygreg/Documents/SNES/emulators/bsnes-x86_64-20260309.app`
 - a native Metal backend has now been implemented in the vendored source lane:
   - source branch: `codex/metal-macos`
-  - source commit: `afc9e74`
+  - source commits:
+    - `afc9e74` `Add Metal video driver for macOS`
+    - `acf5521` `Refine macOS Metal render loop`
   - staged test app: `/Users/theysayheygreg/Documents/SNES/emulators/bsnes-metal-20260331.app`
 
 See also:

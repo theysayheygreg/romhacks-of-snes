@@ -12,7 +12,9 @@ The implementation currently lives in the vendored `bsnes` repo here:
 
 - repo: `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/bsnes`
 - branch: `codex/metal-macos`
-- commit: `afc9e74`
+- commits:
+  - `afc9e74` `Add Metal video driver for macOS`
+  - `acf5521` `Refine macOS Metal render loop`
 
 ## Built app
 
@@ -41,6 +43,7 @@ Current behavior:
 - prefers `Metal` on this Mac by migrating existing saved `OpenGL 3.2` driver selections to `Metal`
 - keeps the existing Cocoa/window integration model
 - uses a Metal texture upload plus textured-quad render path
+- now renders through the `MTKView` delegate draw loop instead of trying to present frames directly against a paused view
 - supports the existing `None` vs `Blur` shader setting as nearest vs linear sampling
 - preserves the current `bsnes` viewport sizing contract by honoring the requested output rectangle inside the drawable
 

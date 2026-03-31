@@ -88,7 +88,9 @@ This workspace now also has a native Metal backend patch in the local `bsnes` so
 
 - repo: `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/bsnes`
 - branch: `codex/metal-macos`
-- commit: `afc9e74` (`Add Metal video driver for macOS`)
+- commits:
+  - `afc9e74` (`Add Metal video driver for macOS`)
+  - `acf5521` (`Refine macOS Metal render loop`)
 
 Current shape of the patch:
 
@@ -107,5 +109,6 @@ Staged patched app for testing:
 Important status:
 
 - the patched app builds cleanly
+- the Metal path now renders through the proper `MTKView` draw callback instead of presenting directly against a paused view
 - the backend is not yet manually runtime-verified in the GUI
 - the next required step is to launch the staged app and confirm that video renders on this Apple Silicon Mac

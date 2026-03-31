@@ -57,3 +57,4 @@ It is not a full session transcript.
 - The vendored `bsnes` source lane now has a native Metal backend branch and a clean Metal-enabled macOS app build.
 - The official `snes9x` macOS release app source URL, architecture shape, and expected app data/config roots.
 - Clean local `bsnes` Metal-backend build on macOS and automatic migration from `OpenGL 3.2` settings to `Metal`.
+- Follow-up `bsnes` Metal render-loop refinement on macOS, keeping the patched vendored lane clean on `codex/metal-macos`.
