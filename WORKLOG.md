@@ -33,4 +33,5 @@ Flow:
 - Added a Documents-based emulator testing layout plus a sync script for curating GUI-emulator-ready ROM symlinks.
 - Investigated the current `bsnes` black-video issue on this Apple Silicon Mac, tied it to an upstream macOS/OpenGL issue, and produced a clean `x86_64` Rosetta test app as the next validation step.
 - Staged the official `snes9x` macOS release app as the practical GUI emulator lane and documented its expected config/data roots after confirming the local Xcode source-build path is blocked by the host Xcode installation state.
+- Added a native Metal video backend to the vendored `bsnes` source lane, built it successfully on this Mac, and staged a native Apple Silicon Metal test app for manual verification.
 - Added a native Metal backend patch to the local `bsnes` source repo, made it the preferred macOS driver, and staged a patched `bsnes` app for GUI verification on Apple Silicon.

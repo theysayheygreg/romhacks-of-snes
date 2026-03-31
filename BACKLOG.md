@@ -91,6 +91,7 @@ Lane-specific work lives in:
   - decide whether the workspace wants launcher/helper scripts for consistent ROM testing
   - validate whether the `x86_64` Rosetta `bsnes` build is a stable workaround for the Apple Silicon black-video issue
   - [x] Stage a practical `snes9x` macOS app lane and capture its expected config/data paths
+  - [ ] Manually verify the native Metal-enabled `bsnes` build against clean and modified ROMs
 
 - [ ] Research multiworld / Archipelago-style crossover synchronization
   - understand protocol shape and state sync assumptions

@@ -70,11 +70,16 @@ Why:
 
 ## Current recommendation
 
+This note now has a newer companion:
+
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/docs/bsnes-metal-01.md`
+
 For this Mac:
 
 - keep `bsnes` source as a reference/debugging codebase
 - treat native `arm64` `bsnes` GUI builds as currently unreliable for runtime video testing
-- test the `x86_64` Rosetta build next
+- test the new Metal-enabled native `arm64` build next
+- keep the `x86_64` Rosetta build as a comparison lane if needed
 - if that still fails, prefer `snes9x` as the pragmatic emulator lane and real hardware via `sd2snes` as final truth
 
 ## Local Metal patch lane

@@ -56,6 +56,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `docs/multiworld-architecture-01.md`: first shared note on Archipelago-style multiworld relevance for the workspace
 - `docs/emulator-testing-layout.md`: local testing-folder layout and emulator path conventions
 - `docs/bsnes-macos-rendering-01.md`: investigation note for the current Apple Silicon `bsnes` black-video issue
+- `docs/bsnes-metal-01.md`: Metal backend implementation note for the vendored `bsnes` source lane
 - `docs/snes9x-macos-01.md`: current practical macOS `snes9x` app lane and expected config/data paths
 - `docs/external-research/`: landing zone for externally generated research briefs before distillation
 - `WORKSPACE-STRUCTURE.md`: how shared SNES knowledge and per-project swim lanes are organized
@@ -78,6 +79,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - Generated local outputs live under `build/`, with conventions documented in `build/README.md`.
 - The macOS toolchain is now documented in `docs/macos-toolchain.md`.
 - The current `bsnes` Apple Silicon rendering issue and workaround lane are captured in `docs/bsnes-macos-rendering-01.md`.
+- The current Metal backend implementation note for `bsnes` lives in `docs/bsnes-metal-01.md`.
 - The current practical `snes9x` release-app lane is captured in `docs/snes9x-macos-01.md`.
 - The current external resource pass is curated in `docs/research-resource-index.md`.
 - The current comparative design note for the three anchor games lives in `docs/game-design-three-anchors.md`.
@@ -87,6 +89,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `snes/` is now a standalone git repository for the workspace itself.
 - Verified locally on this Mac:
   - `bsnes` source build
+  - Metal-enabled `bsnes` source build on branch `codex/metal-macos`
   - staged official `snes9x` macOS release app
   - `SMZ3` CLI build and help output
   - `MapRandomizer` Rust workspace check after submodule hydration

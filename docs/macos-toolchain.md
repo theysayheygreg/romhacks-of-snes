@@ -48,10 +48,15 @@ Current caveat on this Apple Silicon Mac:
 - the current official nightly macOS asset also resolves to an `arm64` binary, so it reproduces the same failure
 - a clean `x86_64` test build was produced as a likely Rosetta workaround:
   - `/Users/theysayheygreg/Documents/SNES/emulators/bsnes-x86_64-20260309.app`
+- a native Metal backend has now been implemented in the vendored source lane:
+  - source branch: `codex/metal-macos`
+  - source commit: `afc9e74`
+  - staged test app: `/Users/theysayheygreg/Documents/SNES/emulators/bsnes-metal-20260331.app`
 
 See also:
 
 - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/docs/bsnes-macos-rendering-01.md`
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/docs/bsnes-metal-01.md`
 
 ### SMZ3 CLI
 

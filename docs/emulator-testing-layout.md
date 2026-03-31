@@ -95,6 +95,8 @@ Important implication:
 
 Practical GUI launchers currently staged for this Mac:
 
+- `bsnes` native Metal test build:
+  - `/Users/theysayheygreg/Documents/SNES/emulators/bsnes-metal-20260331.app`
 - `bsnes` Rosetta workaround candidate:
   - `/Users/theysayheygreg/Documents/SNES/emulators/bsnes-x86_64-20260309.app`
 - `snes9x` release app:
@@ -102,8 +104,9 @@ Practical GUI launchers currently staged for this Mac:
 
 Current preferred quick-test order:
 
-1. `snes9x` release app
-2. `bsnes` workaround lane if needed for comparison
+1. `bsnes` native Metal test build
+2. `snes9x` release app
+3. `bsnes` Rosetta workaround lane if needed for comparison
 3. real hardware via `sd2snes` when we have stronger standalone ROM artifacts
 
 ## Refresh workflow
