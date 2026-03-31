@@ -128,7 +128,34 @@ These are the current non-Mac-native or only-partially-verified lanes:
 - `snestistics`: documentation still describes Windows-only capture and `LoROM`-focused workflows
 - `jpdasm`: needs `asarmon`, not stock `asar`, for exact reassembly
 - `alttp_vt_randomizer`: PHP/composer prerequisites are installed, but database/app setup is still unverified
-- `snes9x`: source is ingested and useful for research, but I did not spend time on a source build because `bsnes` already covers the primary emulator target
+- `snes9x`: source is ingested and useful for research, but the local Xcode source-build lane is currently blocked by the host `xcodebuild` installation state
+
+### Snes9x release-app lane
+
+The practical GUI emulator path on this Mac is now the official release app:
+
+- `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app`
+
+Verified facts:
+
+- downloaded from the official `snes9xgit/snes9x` GitHub release for `1.63`
+- universal binary with both `arm64` and `x86_64`
+- bundle identifier `com.snes9x.macos.snes9x`
+
+Expected app data/config roots:
+
+- `~/Library/Application Support/Snes9x`
+- `~/Library/Preferences/com.snes9x.macos.snes9x.plist`
+- `~/Library/Saved Application State/com.snes9x.macos.snes9x.savedState`
+
+Source-build note:
+
+- the repo contains a real macOS app project under `repos/snes9x/macosx`
+- local `xcodebuild` currently fails before project load because the installed Xcode environment needs a first-launch package repair that requires authorization
+
+See also:
+
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/docs/snes9x-macos-01.md`
 
 ## Real hardware
 

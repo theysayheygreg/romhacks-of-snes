@@ -32,3 +32,4 @@ Flow:
 - Produced the first standalone SMW ROM artifact with a checksum-fixed patch-first workflow.
 - Added a Documents-based emulator testing layout plus a sync script for curating GUI-emulator-ready ROM symlinks.
 - Investigated the current `bsnes` black-video issue on this Apple Silicon Mac, tied it to an upstream macOS/OpenGL issue, and produced a clean `x86_64` Rosetta test app as the next validation step.
+- Staged the official `snes9x` macOS release app as the practical GUI emulator lane and documented its expected config/data roots after confirming the local Xcode source-build path is blocked by the host Xcode installation state.

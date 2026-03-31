@@ -73,14 +73,38 @@ Recommended path targets:
 
 ## snes9x status
 
-The local `snes9x` source tree is present, but no built macOS app was found in the standard app locations during this pass.
+The current practical `snes9x` app lane is:
+
+- `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app`
+
+Expected app-level paths:
+
+- `~/Library/Application Support/Snes9x`
+- `~/Library/Preferences/com.snes9x.macos.snes9x.plist`
+- `~/Library/Saved Application State/com.snes9x.macos.snes9x.savedState`
+
+The local `snes9x` source tree is still present under `repos/snes9x/`, but the local `xcodebuild` path is currently blocked by the host Xcode installation state.
 
 Important implication:
 
 - the shared `~/Documents/SNES/emulator-ready` folder can be the cross-emulator load target
-- but the actual `snes9x` preference update still depends on the local app build or install we choose to use
+- and the staged release app is now the default quick-test launcher
+- `snes9x` appears to use macOS preferences / `NSUserDefaults`, not a simple text config file like `bsnes`
 
-From the macOS source lane, `snes9x` appears to use macOS preferences / `NSUserDefaults`, not a simple text config file like `bsnes`.
+## Current emulator app paths
+
+Practical GUI launchers currently staged for this Mac:
+
+- `bsnes` Rosetta workaround candidate:
+  - `/Users/theysayheygreg/Documents/SNES/emulators/bsnes-x86_64-20260309.app`
+- `snes9x` release app:
+  - `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app`
+
+Current preferred quick-test order:
+
+1. `snes9x` release app
+2. `bsnes` workaround lane if needed for comparison
+3. real hardware via `sd2snes` when we have stronger standalone ROM artifacts
 
 ## Refresh workflow
 
