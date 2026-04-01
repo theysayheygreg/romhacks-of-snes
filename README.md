@@ -35,6 +35,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `roms/`: staged clean base ROMs for workspace-local use
 - `data/`: machine-readable graph and metadata
 - `tools/`: local helper tools for inspection
+- `data/tas-harnesses/`: machine-readable harness sketches for deterministic smoke-test work
 - `repos/`: ingested upstream source trees
 - `lanes/`: project swim lanes under the shared SNES workspace
 - `BACKLOG.md`: durable task list for this workspace
@@ -58,6 +59,8 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `docs/bsnes-macos-rendering-01.md`: investigation note for the current Apple Silicon `bsnes` black-video issue
 - `docs/bsnes-metal-01.md`: Metal backend implementation note for the vendored `bsnes` source lane
 - `docs/snes9x-macos-01.md`: current practical macOS `snes9x` app lane and expected config/data paths
+- `docs/tas-harnesses-01.md`: research note on TAS and TAS-adjacent harness lanes for the three anchor games
+- `docs/tas-harness-sketches-01.md`: concrete first-pass harness designs for SMW, Super Metroid, and Zelda 3
 - `docs/external-research/`: landing zone for externally generated research briefs before distillation
 - `WORKSPACE-STRUCTURE.md`: how shared SNES knowledge and per-project swim lanes are organized
 - `lanes/zelda/vanilla-deep-dive-01.md`: first practical vanilla Zelda 3 reverse-engineering note
@@ -86,6 +89,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - The first Gemini brief has been distilled into `docs/gemini-research-intake-001.md`.
 - The first Gemini reference-verification brief has been distilled into `docs/gemini-reference-verification-intake-001.md`.
 - The current multiworld relevance note lives in `docs/multiworld-architecture-01.md`.
+- TAS-harness sketches now live in `data/tas-harnesses/` with a validator at `tools/validate_tas_harnesses.py`.
 - `snes/` is now a standalone git repository for the workspace itself.
 - Verified locally on this Mac:
   - `bsnes` source build

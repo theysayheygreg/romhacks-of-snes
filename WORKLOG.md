@@ -19,6 +19,7 @@ Flow:
 - Wired the connected PS5 DualSense into the staged `snes9x` app as the default Player 1 controller.
 - Built and staged a separate source-built `snes9x` app with a firmer `0.5` left-stick dead zone for DualSense comparison without replacing the stable release app.
 - Completed a first-pass TAS / deterministic-harness research note for SMW, Super Metroid, and ALTTP, with a recommendation to start automation from the Metroid lane.
+- Turned the TAS research into machine-readable harness sketches and a lightweight validator so the workspace has concrete automation targets for all three anchor games.
 
 ### 2026-03-09
 

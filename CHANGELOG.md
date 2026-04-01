@@ -21,6 +21,8 @@ It is not a full session transcript.
 - `smw-starting-lives-09.asm` as the first visible gameplay patch in the SMW lane.
 - App-path-aware `snes9x` launcher and DualSense setup helpers so staged release builds and source-built test apps can share the same harness.
 - `docs/tas-harnesses-01.md` as the first shared note on TAS and TAS-adjacent automation lanes for the three anchor games.
+- `docs/tas-harness-sketches-01.md` plus machine-readable harness manifests under `data/tas-harnesses/`.
+- `tools/validate_tas_harnesses.py` for checking harness-manifest structure.
 
 ### Changed
 

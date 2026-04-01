@@ -1,0 +1,48 @@
+{
+  "id": "smw_harness",
+  "game": "Super Mario World",
+  "rom": "Super Mario World (USA).sfc",
+  "lane": "smw",
+  "status": "sketch",
+  "primary_host_candidate": "BizHawk",
+  "secondary_host_candidates": [
+    "snes9x-rr",
+    "lsnes"
+  ],
+  "source_leads": [
+    {
+      "label": "brunovalads/smw-stuff",
+      "url": "https://github.com/brunovalads/smw-stuff"
+    },
+    {
+      "label": "Masterjun BizHawk orchestration thread",
+      "url": "https://tasvideos.org/Forum/Topics/22544"
+    }
+  ],
+  "harnesses": [
+    {
+      "id": "boot_to_yoshis_house",
+      "type": "movie_replay",
+      "priority": 1,
+      "goal": "Verify that a fresh-file boot reaches stable overworld state and can enter Yoshi's House.",
+      "assertions": [
+        "ROM boots without hang",
+        "fresh save file creation succeeds",
+        "1-player game starts successfully",
+        "overworld is visible and responsive"
+      ],
+      "expected_artifact": "analysis/validation/smw-boot-to-yoshis-house.json"
+    },
+    {
+      "id": "starting_lives_patch_check",
+      "type": "ram_assert",
+      "priority": 2,
+      "goal": "Verify that the patched starting-lives ROM initializes Mario with the expected displayed lives.",
+      "assertions": [
+        "patched ROM boots",
+        "new-file lives state matches expected patch behavior"
+      ],
+      "expected_artifact": "analysis/validation/smw-starting-lives-09.json"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "zelda3_harness",
+  "game": "The Legend of Zelda: A Link to the Past",
+  "rom": "Zelda no Densetsu - Kamigami no Triforce (Japan).sfc",
+  "lane": "zelda",
+  "status": "sketch",
+  "primary_host_candidate": "SNI",
+  "secondary_host_candidates": [
+    "BizHawk",
+    "lsnes"
+  ],
+  "source_leads": [
+    {
+      "label": "alttpo/sni",
+      "url": "https://github.com/alttpo/sni"
+    },
+    {
+      "label": "Archipelago",
+      "url": "https://github.com/ArchipelagoMW/Archipelago"
+    }
+  ],
+  "harnesses": [
+    {
+      "id": "fresh_file_boot",
+      "type": "ram_assert",
+      "priority": 1,
+      "goal": "Verify that a fresh-file boot reaches a stable controllable state without corruption or hang.",
+      "assertions": [
+        "ROM boots without hang",
+        "new file can be started",
+        "early controllable state is reached"
+      ],
+      "expected_artifact": "analysis/validation/zelda3-fresh-file-boot.json"
+    },
+    {
+      "id": "basic_world_state_check",
+      "type": "ram_assert",
+      "priority": 2,
+      "goal": "Verify a small set of key WRAM or SRAM flags remain sane on fresh boot and early progression.",
+      "assertions": [
+        "key world-state flags are initialized as expected",
+        "file-state corruption is absent"
+      ],
+      "expected_artifact": "analysis/validation/zelda3-basic-world-state.json"
+    },
+    {
+      "id": "safe_room_entry",
+      "type": "level_or_room_smoke",
+      "priority": 3,
+      "goal": "Enter one known early room and confirm the transition and room state are stable.",
+      "assertions": [
+        "room entry transition completes",
+        "room remains responsive",
+        "critical room-state flags remain sane"
+      ],
+      "expected_artifact": "analysis/validation/zelda3-safe-room-entry.json"
+    }
+  ]
+}

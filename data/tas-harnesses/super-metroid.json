@@ -1,0 +1,65 @@
+{
+  "id": "super_metroid_harness",
+  "game": "Super Metroid",
+  "rom": "Super Metroid (Japan, USA) (En,Ja).sfc",
+  "lane": "metroid",
+  "status": "sketch",
+  "primary_host_candidate": "BizHawk",
+  "secondary_host_candidates": [
+    "lsnes",
+    "snes9x-rr"
+  ],
+  "source_leads": [
+    {
+      "label": "PJBoy/lua",
+      "url": "https://github.com/PJBoy/lua"
+    },
+    {
+      "label": "Super Metroid Practice Hack",
+      "url": "https://github.com/tewtal/sm_practice_hack/"
+    },
+    {
+      "label": "Super Metroid TAS wiki",
+      "url": "https://wiki.supermetroid.run/Tool_Assisted_Speedruns"
+    }
+  ],
+  "harnesses": [
+    {
+      "id": "crateria_spawn_boot",
+      "type": "ram_assert",
+      "priority": 1,
+      "goal": "Verify that the ROM boots into a stable Samus spawn state with sane early-game state.",
+      "assertions": [
+        "ROM boots without hang",
+        "Samus is in controllable state",
+        "major state fields are sane after initial spawn"
+      ],
+      "expected_artifact": "analysis/validation/super-metroid-crateria-spawn.json"
+    },
+    {
+      "id": "known_door_transition",
+      "type": "level_or_room_smoke",
+      "priority": 2,
+      "goal": "Replay one short deterministic movement sequence through a known stable door transition.",
+      "assertions": [
+        "source room loads",
+        "door transition completes",
+        "destination room loads",
+        "control continues after transition"
+      ],
+      "expected_artifact": "analysis/validation/super-metroid-door-transition.json"
+    },
+    {
+      "id": "item_or_plm_probe",
+      "type": "level_or_room_smoke",
+      "priority": 3,
+      "goal": "Verify a known item room still contains a stable PLM/item interaction point.",
+      "assertions": [
+        "target room loads",
+        "expected PLM or item object exists",
+        "interaction does not hang or corrupt state"
+      ],
+      "expected_artifact": "analysis/validation/super-metroid-item-plm-probe.json"
+    }
+  ]
+}
