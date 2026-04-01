@@ -29,6 +29,7 @@ Current lane artifacts:
 - `./vanilla-deep-dive-01.md`
 - `./smw-project-template-01.md`
 - `./standalone-rom-01.md`
+- `./standalone-rom-02.md`
 
 Current status:
 
@@ -39,6 +40,7 @@ Current status:
 - first base ROM staged locally and fingerprinted
 - first vanilla deep-dive pass completed
 - first standalone SMW ROM artifact produced via a low-risk patch-first lane
+- first visible gameplay SMW ROM artifact produced via a start-lives patch
 
 Use this lane for future additions like:
 

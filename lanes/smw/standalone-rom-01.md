@@ -69,4 +69,6 @@ The workspace now has a real SMW output path, even before standing up:
 - a full Callisto template build
 - a more invasive gameplay patch
 
-That is enough to support the next step, which should be a visible-but-still-safe SMW mod rather than more setup work.
+That is enough to support the next step, which is now captured in:
+
+- `standalone-rom-02.md`

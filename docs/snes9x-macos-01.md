@@ -24,7 +24,7 @@ Verified app facts:
 Verified runtime facts on this Mac:
 
 - the app opens cleanly on Apple Silicon
-- ROM loading works through the app's native Cocoa `open` path
+- ROM loading works through a normal `open -a Snes9x <rom>` handoff
 - stock `Super Mario World (USA).sfc` loads with a visible gameplay surface
 - the reliable scripted launcher is:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh`
@@ -48,8 +48,7 @@ These should be treated as the likely app-level config and data roots for the cu
 
 Observed note:
 
-- `open -a Snes9x <rom>` was not a reliable ROM handoff here
-- using AppleScript `tell application "Snes9x" to open POSIX file ...` is reliable
+- the simplest working launcher in this workspace is now a plain `open -a` helper script
 
 ## Workspace role
 

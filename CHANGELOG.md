@@ -12,6 +12,24 @@ This changelog is for the workspace itself:
 
 It is not a full session transcript.
 
+## 2026-03-31
+
+### Added
+
+- Second standalone SMW ROM artifact note for a visible gameplay patch.
+- `apply_smw_starting_lives_09.sh` helper for producing a checksum-fixed SMW gameplay test ROM.
+- `smw-starting-lives-09.asm` as the first visible gameplay patch in the SMW lane.
+
+### Changed
+
+- Standardized the practical macOS emulator lane on `snes9x` while parking `bsnes` as renderer/debug R&D.
+- Extended the SMW lane from header-only artifact generation to a real gameplay-state patch workflow.
+
+### Verified
+
+- SMW U start-lives patch at `00:9E26` changes the initialization immediate from `#$04` to `#$09`.
+- Generated `smw-starting-lives-09.sfc` remains a valid checksum-paired LoROM image with internal title `SMW START 09 LIVES`.
+
 ## 2026-03-09
 
 ### Added

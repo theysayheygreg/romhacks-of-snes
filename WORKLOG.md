@@ -11,6 +11,12 @@ Flow:
 
 ## Entries
 
+### 2026-03-31
+
+- Parked `bsnes` as a Metal R&D lane after proving native window output but not real SNES frame upload.
+- Promoted `snes9x` to the default practical macOS emulator lane with a reliable AppleScript launcher.
+- Produced a second standalone SMW ROM artifact that changes visible gameplay behavior by raising vanilla starting lives from 4 to 9.
+
 ### 2026-03-09
 
 - Initialized the SNES workspace as its own git repository.

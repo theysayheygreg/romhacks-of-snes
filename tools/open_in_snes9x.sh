@@ -22,10 +22,4 @@ fi
 
 open -ga "$APP"
 sleep 1
-
-osascript <<APPLESCRIPT
-tell application "Snes9x"
-  activate
-  open POSIX file "$ROM"
-end tell
-APPLESCRIPT
+open -a "$APP" "$ROM"
