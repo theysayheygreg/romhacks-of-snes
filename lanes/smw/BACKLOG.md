@@ -58,6 +58,11 @@ This backlog is for Super Mario World-specific work inside the SNES workspace.
   - likely tool ordering for Asar / PIXI / GPS / AddmusicK / UberASM
   - whether the community still treats clean ROM + tools as the normal base
 
+- [ ] Ingest the first SMW TAS / script harness lane
+  - evaluate `brunovalads/smw-stuff`
+  - capture whether `BizHawk` or `snes9x-rr` is the better first replay/smoke-test host
+  - define one short deterministic boot-to-overworld or boot-to-level smoke test
+
 ## Research Gaps
 
 - [ ] Pull more material from `SMW Central`

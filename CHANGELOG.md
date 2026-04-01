@@ -20,6 +20,7 @@ It is not a full session transcript.
 - `apply_smw_starting_lives_09.sh` helper for producing a checksum-fixed SMW gameplay test ROM.
 - `smw-starting-lives-09.asm` as the first visible gameplay patch in the SMW lane.
 - App-path-aware `snes9x` launcher and DualSense setup helpers so staged release builds and source-built test apps can share the same harness.
+- `docs/tas-harnesses-01.md` as the first shared note on TAS and TAS-adjacent automation lanes for the three anchor games.
 
 ### Changed
 
@@ -27,6 +28,7 @@ It is not a full session transcript.
 - Extended the SMW lane from header-only artifact generation to a real gameplay-state patch workflow.
 - Added a reusable DualSense setup path for the staged `snes9x` app on this Mac.
 - Added a separate `snes9x` controller-test app with a stronger analog-stick dead zone for local drift comparison.
+- Added the first explicit backlog slice for TAS-style deterministic smoke testing across the shared SNES lane plus Zelda, Metroid, and SMW.
 
 ### Verified
 

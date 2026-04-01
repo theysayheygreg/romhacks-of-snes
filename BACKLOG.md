@@ -103,6 +103,11 @@ Lane-specific work lives in:
   - One low-risk patch example for Super Metroid
   - [x] One low-risk patch or editor-driven modification for SMW
 
+- [ ] Stand up a TAS / deterministic smoke-test lane
+  - Evaluate `BizHawk` versus `lsnes` as the first automation-friendly emulator lane.
+  - Decide when to use movie replay versus RAM assertions versus room/level smoke tests.
+  - Treat TAS tooling as a testing harness, not just a speedrun curiosity.
+
 - [ ] Add a hardware deployment note for `sd2snes`
   - Feature support boundaries
   - Special-chip caveats
