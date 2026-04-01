@@ -30,9 +30,9 @@ For the U ROM matched by this workspace, the immediate value lives at:
 
 - `LoadSaveAndFadeToOW`
 - `SMW_U.sym` address `00009E17`
-- patched instruction at `00:9E26`
+- patched instruction at `00:9E24`
 
-It also changes the internal ROM title so the output image is easy to identify in tooling.
+The patch uses the internal immediate value `#$08`, which displays as 9 lives in-game.
 
 ## Why this patch
 

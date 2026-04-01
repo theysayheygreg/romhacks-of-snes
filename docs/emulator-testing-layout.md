@@ -95,6 +95,16 @@ Reliable launcher:
 
 - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh`
 
+DualSense setup helper:
+
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/setup_snes9x_dualsense.sh`
+
+Current controller note:
+
+- the connected PS5 DualSense is seen by `Snes9x` as device key `1356:3302:0`
+- local `Snes9x 1.63` shipped without the matching macOS PS5 SDL mapping
+- the workspace helper patches that app bundle resource and installs a direct Player 1 binding set for the local DualSense HID cookies
+
 Verified load example:
 
 ```sh

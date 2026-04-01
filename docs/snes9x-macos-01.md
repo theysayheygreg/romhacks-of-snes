@@ -26,8 +26,13 @@ Verified runtime facts on this Mac:
 - the app opens cleanly on Apple Silicon
 - ROM loading works through a normal `open -a Snes9x <rom>` handoff
 - stock `Super Mario World (USA).sfc` loads with a visible gameplay surface
+- the connected PS5 DualSense is detected by `Snes9x` as vendor `0x054c`, product `0x0ce6`
+- the staged release app needed an updated `gamecontrollerdb.txt` entry because the bundled DB lacked the upstream macOS PS5 mapping
+- the most reliable local fix is to write the DualSense HID cookie bindings directly into `Snes9x` prefs for this machine
 - the reliable scripted launcher is:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh`
+- the reliable DualSense setup helper is:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/setup_snes9x_dualsense.sh`
 
 ## Why this is the current practical lane
 
@@ -49,6 +54,7 @@ These should be treated as the likely app-level config and data roots for the cu
 Observed note:
 
 - the simplest working launcher in this workspace is now a plain `open -a` helper script
+- the simplest controller fix is to patch the staged app bundle's SDL controller database with the upstream PS5 macOS mapping and then install a direct DualSense binding set for `1356:3302:0`
 
 ## Workspace role
 

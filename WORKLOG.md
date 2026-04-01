@@ -14,8 +14,9 @@ Flow:
 ### 2026-03-31
 
 - Parked `bsnes` as a Metal R&D lane after proving native window output but not real SNES frame upload.
-- Promoted `snes9x` to the default practical macOS emulator lane with a reliable AppleScript launcher.
+- Promoted `snes9x` to the default practical macOS emulator lane with a reliable `open -a` launcher.
 - Produced a second standalone SMW ROM artifact that changes visible gameplay behavior by raising vanilla starting lives from 4 to 9.
+- Wired the connected PS5 DualSense into the staged `snes9x` app as the default Player 1 controller.
 
 ### 2026-03-09
 

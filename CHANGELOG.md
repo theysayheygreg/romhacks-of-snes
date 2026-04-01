@@ -24,11 +24,13 @@ It is not a full session transcript.
 
 - Standardized the practical macOS emulator lane on `snes9x` while parking `bsnes` as renderer/debug R&D.
 - Extended the SMW lane from header-only artifact generation to a real gameplay-state patch workflow.
+- Added a reusable DualSense setup path for the staged `snes9x` app on this Mac.
 
 ### Verified
 
-- SMW U start-lives patch at `00:9E26` changes the initialization immediate from `#$04` to `#$09`.
-- Generated `smw-starting-lives-09.sfc` remains a valid checksum-paired LoROM image with internal title `SMW START 09 LIVES`.
+- SMW U start-lives patch at `00:9E24` changes the initialization immediate from `#$04` to the internal value `#$08`, which displays as 9 lives in-game.
+- `smw-starting-lives-09.sfc` boots correctly in `snes9x` with the expected 9 starting lives behavior.
+- The staged `snes9x` app now accepts the connected DualSense as Player 1 through the workspace setup helper.
 
 ## 2026-03-09
 
