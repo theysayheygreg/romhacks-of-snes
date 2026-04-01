@@ -22,6 +22,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `repos/ALttPDoorRandomizer`: Python-heavy ALTTP door-randomizer generation stack
 - `repos/RandomMetroidSolver`: VARIA randomizer/solver/tracker/plandomizer stack
 - `repos/MapRandomizer`: Super Metroid map/room-connectivity randomizer stack
+- `repos/PJBoy-lua`: Super Metroid-heavy emulator Lua / TAS utility script stack
 - `repos/SMWDisX`: multi-version Super Mario World disassembly/rebuild source lane
 - `repos/callisto`: Super Mario World project build-system and orchestration lane
 - `repos/smw-project-template`: Super Mario World starter/template lane built around Callisto
@@ -35,6 +36,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `roms/`: staged clean base ROMs for workspace-local use
 - `data/`: machine-readable graph and metadata
 - `tools/`: local helper tools for inspection
+- `harness/scenarios/`: concrete scenario manifests for deterministic harness work
 - `data/tas-harnesses/`: machine-readable harness sketches for deterministic smoke-test work
 - `repos/`: ingested upstream source trees
 - `lanes/`: project swim lanes under the shared SNES workspace
@@ -66,6 +68,8 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `lanes/zelda/vanilla-deep-dive-01.md`: first practical vanilla Zelda 3 reverse-engineering note
 - `lanes/metroid/vanilla-deep-dive-01.md`: first practical vanilla Super Metroid reverse-engineering note
 - `lanes/metroid/plm-room-state-01.md`: first structural note on PLMs and room-state data in Super Metroid
+- `lanes/metroid/tas-harness-01.md`: first concrete Super Metroid TAS-harness note and scenario anchor
+- `analysis/validation/super-metroid-known-door-transition-preflight.json`: first generated Metroid TAS-harness preflight artifact
 - `lanes/smw/INTAKE.md`: intake checklist for standing up the SMW lane with a base ROM and repos
 - `lanes/smw/lunar-magic-01.md`: local Lunar Magic tooling classification and supported-ROM notes
 - `lanes/smw/callisto-01.md`: Callisto build-system classification and workflow notes
@@ -90,6 +94,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - The first Gemini reference-verification brief has been distilled into `docs/gemini-reference-verification-intake-001.md`.
 - The current multiworld relevance note lives in `docs/multiworld-architecture-01.md`.
 - TAS-harness sketches now live in `data/tas-harnesses/` with a validator at `tools/validate_tas_harnesses.py`.
+- The first real Super Metroid harness scenario now lives in `harness/scenarios/super-metroid-known-door-transition.json` with a preflight runner at `tools/run_tas_harness.py`.
 - `snes/` is now a standalone git repository for the workspace itself.
 - Verified locally on this Mac:
   - `bsnes` source build
@@ -100,6 +105,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
   - `z3randomizer` patch-first ROM generation
 - The current Metroid anchor note lives in `lanes/metroid/vanilla-deep-dive-01.md`.
 - The current Metroid PLM/state companion note lives in `lanes/metroid/plm-room-state-01.md`.
+- The current Metroid TAS-harness note lives in `lanes/metroid/tas-harness-01.md`.
 - The current Zelda anchor note lives in `lanes/zelda/vanilla-deep-dive-01.md`.
 - The current SMW anchor note lives in `lanes/smw/vanilla-deep-dive-01.md`.
 - The SMW lane now has its first standalone ROM artifact and starter-template classification.

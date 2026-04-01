@@ -23,6 +23,8 @@ It is not a full session transcript.
 - `docs/tas-harnesses-01.md` as the first shared note on TAS and TAS-adjacent automation lanes for the three anchor games.
 - `docs/tas-harness-sketches-01.md` plus machine-readable harness manifests under `data/tas-harnesses/`.
 - `tools/validate_tas_harnesses.py` for checking harness-manifest structure.
+- `lanes/metroid/tas-harness-01.md`, `harness/scenarios/super-metroid-known-door-transition.json`, and `tools/run_tas_harness.py` as the first concrete Metroid harness slice.
+- `analysis/validation/super-metroid-known-door-transition-preflight.json` as the first generated Metroid harness result artifact.
 
 ### Changed
 

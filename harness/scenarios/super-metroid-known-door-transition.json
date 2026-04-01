@@ -1,0 +1,45 @@
+{
+  "id": "super-metroid-known-door-transition",
+  "game": "Super Metroid",
+  "lane": "metroid",
+  "status": "preflight",
+  "runtime": {
+    "preferred_host": "BizHawk",
+    "alternate_hosts": [
+      "lsnes",
+      "snes9x-rr"
+    ]
+  },
+  "rom": {
+    "path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/roms/base/Super Metroid (Japan, USA) (En,Ja).sfc",
+    "analysis": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/super-metroid-rom.json"
+  },
+  "source_harness": {
+    "repo": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua",
+    "entry_scripts": [
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/Super Metroid.lua",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/Super Hitbox + TAS.lua",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/cross emu.lua"
+    ]
+  },
+  "scenario": {
+    "type": "level_or_room_smoke",
+    "goal": "Verify that a known short room-to-door slice can become the first deterministic Super Metroid smoke test.",
+    "planned_flow": [
+      "boot ROM",
+      "reach controllable Samus state",
+      "prepare one known door-transition setup",
+      "assert transition-relevant state is sane before full replay automation is added"
+    ]
+  },
+  "assertions": [
+    "rom_boots",
+    "game_state_is_controllable",
+    "room_pointer_is_present",
+    "door_transition_function_is_observable",
+    "source_lua_harness_files_exist"
+  ],
+  "result": {
+    "preflight_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/super-metroid-known-door-transition-preflight.json"
+  }
+}

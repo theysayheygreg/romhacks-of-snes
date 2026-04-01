@@ -15,6 +15,7 @@ Current key shared references outside this lane:
 - `../../repos/supermetroid`
 - `../../repos/RandomMetroidSolver`
 - `../../repos/MapRandomizer`
+- `../../repos/PJBoy-lua`
 - `../../analysis/super-metroid-rom.json`
 - `../../analysis/super-metroid-key-symbols.json`
 - `../../docs/metroid-randomizer-progression.md`
@@ -38,6 +39,7 @@ Current canonical lane notes:
 
 - `./vanilla-deep-dive-01.md`
 - `./plm-room-state-01.md`
+- `./tas-harness-01.md`
 
 Backlog:
 

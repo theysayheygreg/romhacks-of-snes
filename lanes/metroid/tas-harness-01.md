@@ -1,0 +1,90 @@
+# Metroid TAS Harness Note 01
+
+This note captures the first concrete TAS-harness lane for Super Metroid.
+
+## Source lane ingested
+
+- `../../repos/PJBoy-lua`
+  - local path: `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua`
+  - current local commit: `466d417`
+
+Most relevant files in that repo for this lane:
+
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/Super Metroid.lua`
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/Super Hitbox.lua`
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/Super Hitbox + TAS.lua`
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/Super Camhack.lua`
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/cross emu.lua`
+
+## Why this is the first real harness lane
+
+This repo already gives us:
+
+- emulator abstraction through `cross emu.lua`
+- direct WRAM readers for room, door, game-state, Samus position, and many other fields
+- a TAS-oriented overlay layer
+- support for `BizHawk`, `lsnes`, and older rerecording emulator workflows
+
+That makes it the strongest immediate way to stop relying only on manual launch-and-look verification.
+
+## First scenario choice
+
+The first concrete scenario for this lane is:
+
+- `super-metroid-known-door-transition`
+
+Its job is not to prove an entire run works. Its job is to prove one short stable slice works:
+
+- ROM boots
+- Samus reaches controllable state
+- one known room/door transition setup is available as the first smoke-test target
+
+## Current implementation status
+
+This workspace now has:
+
+- a machine-readable scenario manifest at:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/harness/scenarios/super-metroid-known-door-transition.json`
+- a generic harness preflight runner at:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_harness.py`
+- a generated preflight artifact at:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/super-metroid-known-door-transition-preflight.json`
+
+Right now the runner does preflight validation only:
+
+- verifies the ROM exists
+- verifies the referenced Lua harness files exist
+- records the ROM hash
+- records the intended host and assertion set
+
+That is deliberately small. It gives us a real scenario object and result artifact now, without pretending we already have BizHawk automation wired on this Mac.
+
+## What to do next
+
+The next implementation step is:
+
+1. pick the actual host lane
+   - likely `BizHawk` first
+2. define how the scenario loads
+   - movie replay
+   - savestate
+   - scripted boot path
+3. bind the first real assertions
+   - `game_state`
+   - `room_pointer`
+   - `door_transition_function`
+   - Samus control-ready state
+4. emit pass/fail results into the same `analysis/validation/` path family
+
+## Practical recommendation
+
+Do not overbuild this.
+
+The first finished Metroid harness should be:
+
+- one host
+- one scenario
+- 3 to 5 assertions
+- one JSON result
+
+That is enough to become genuinely useful for hack smoke testing.

@@ -1,0 +1,22 @@
+{
+  "scenario_id": "super-metroid-known-door-transition",
+  "status": "pass",
+  "mode": "preflight_only",
+  "runtime": "BizHawk",
+  "rom_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/roms/base/Super Metroid (Japan, USA) (En,Ja).sfc",
+  "rom_sha256": "12b77c4bc9c1832cee8881244659065ee1d84c70c3d29e6eaf92e6798cc2ca72",
+  "analysis_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/super-metroid-rom.json",
+  "entry_scripts": [
+    "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/Super Metroid.lua",
+    "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/Super Hitbox + TAS.lua",
+    "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/cross emu.lua"
+  ],
+  "assertions": [
+    "rom_boots",
+    "game_state_is_controllable",
+    "room_pointer_is_present",
+    "door_transition_function_is_observable",
+    "source_lua_harness_files_exist"
+  ],
+  "errors": []
+}

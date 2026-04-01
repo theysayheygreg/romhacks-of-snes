@@ -51,6 +51,7 @@ This backlog is for Super Metroid-specific work inside the SNES workspace.
   - whether it should become a second modern Metroid source lane
 
 - [ ] Ingest the first Super Metroid TAS / script harness lane
-  - ingest `PJBoy/lua`
-  - classify `sm_practice_hack` as a testing/instrumentation asset, not just a practice tool
-  - define one deterministic room-load or door-transition smoke test
+  - [x] ingest `PJBoy/lua`
+  - [ ] classify `sm_practice_hack` as a testing/instrumentation asset, not just a practice tool
+  - [x] define one deterministic room-load or door-transition smoke test
+  - [ ] bind the first real emulator-host automation path to the scenario manifest

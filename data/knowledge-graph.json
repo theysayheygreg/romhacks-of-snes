@@ -113,6 +113,12 @@
       "path": "repos/MapRandomizer"
     },
     {
+      "id": "pjboy_lua",
+      "type": "project",
+      "label": "PJBoy Lua Scripts",
+      "path": "repos/PJBoy-lua"
+    },
+    {
       "id": "smwdisx",
       "type": "project",
       "label": "SMWDisX",
