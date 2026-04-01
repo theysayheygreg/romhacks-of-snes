@@ -21,6 +21,14 @@ Verified app facts:
 - contains both `x86_64` and `arm64`
 - bundle identifier `com.snes9x.macos.snes9x`
 
+Verified runtime facts on this Mac:
+
+- the app opens cleanly on Apple Silicon
+- ROM loading works through the app's native Cocoa `open` path
+- stock `Super Mario World (USA).sfc` loads with a visible gameplay surface
+- the reliable scripted launcher is:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh`
+
 ## Why this is the current practical lane
 
 - the local `snes9x` source repo includes a real macOS Cocoa/Xcode app lane under `repos/snes9x/macosx`
@@ -38,15 +46,27 @@ The Homebrew cask metadata for `snes9x` identifies these macOS paths:
 
 These should be treated as the likely app-level config and data roots for the current release app.
 
+Observed note:
+
+- `open -a Snes9x <rom>` was not a reliable ROM handoff here
+- using AppleScript `tell application "Snes9x" to open POSIX file ...` is reliable
+
 ## Workspace role
 
 For this Mac, `snes9x` should be treated as:
 
 - the practical GUI emulator lane for quick ROM testing
-- a fallback runtime lane when `bsnes` is blocked by the current Apple Silicon rendering issue
+- the default runtime lane while `bsnes` remains in R&D
+- the emulator we should keep using while the workspace returns to actual ROMhacking work
 
 `bsnes` still remains useful as:
 
 - a reference codebase
 - an accuracy-oriented research lane
 - a future debugger/reference lane if the macOS rendering issue is resolved
+
+Current `bsnes` note:
+
+- the Metal branch now proves visible native window output on Apple Silicon
+- the remaining bug is the real-frame upload path, not macOS window creation
+- that is useful progress, but not enough to justify blocking ROM work on further `bsnes` effort right now

@@ -109,6 +109,6 @@ Staged patched app for testing:
 Important status:
 
 - the patched app builds cleanly
-- the Metal path now renders through the proper `MTKView` draw callback instead of presenting directly against a paused view
-- the backend is not yet manually runtime-verified in the GUI
-- the next required step is to launch the staged app and confirm that video renders on this Apple Silicon Mac
+- the host/compositor problem is no longer the main blocker
+- the remaining failure is the real SNES frame upload path
+- for this workspace, `bsnes` should now be treated as parked R&D until that narrower bug is fixed

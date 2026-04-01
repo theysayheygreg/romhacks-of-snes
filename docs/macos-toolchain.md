@@ -27,7 +27,7 @@ source /Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools
 
 ### bsnes
 
-Primary emulator/reference build on this Mac.
+Research/reference emulator build on this Mac.
 
 Build command:
 
@@ -59,6 +59,13 @@ See also:
 
 - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/docs/bsnes-macos-rendering-01.md`
 - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/docs/bsnes-metal-01.md`
+
+Current practical status:
+
+- keep `bsnes` as a source/reference/debugging codebase
+- keep the local Metal branch as a parked R&D lane
+- do not treat it as the default GUI test lane on this Mac right now
+- use `snes9x` as the practical emulator lane for ROM work
 
 ### SMZ3 CLI
 
@@ -148,6 +155,9 @@ Verified facts:
 - downloaded from the official `snes9xgit/snes9x` GitHub release for `1.63`
 - universal binary with both `arm64` and `x86_64`
 - bundle identifier `com.snes9x.macos.snes9x`
+- verified ROM loading via AppleScript app `open` path
+- verified visible stock SMW gameplay window on this Mac
+- this is the default playable emulator lane for the workspace right now
 
 Expected app data/config roots:
 
@@ -160,9 +170,24 @@ Source-build note:
 - the repo contains a real macOS app project under `repos/snes9x/macosx`
 - local `xcodebuild` currently fails before project load because the installed Xcode environment needs a first-launch package repair that requires authorization
 
+Reliable launcher:
+
+```sh
+/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh \
+  "/Users/theysayheygreg/Documents/SNES/emulator-ready/Super Mario World (USA).sfc"
+```
+
 See also:
 
 - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/docs/snes9x-macos-01.md`
+
+## Current recommendation
+
+For this Mac and this workspace:
+
+- use `snes9x` for day-to-day ROM loading and visual testing
+- use real hardware via `sd2snes` as the later final-truth lane
+- keep `bsnes` only as a source/reference/debugging lane until its Metal upload path is fixed
 
 ## Real hardware
 

@@ -1,6 +1,6 @@
 # Emulator Testing Layout
 
-This note defines the local testing layout for GUI emulators like `bsnes` and later `snes9x`.
+This note defines the local testing layout for GUI emulators, with `snes9x` now serving as the practical macOS play-test lane.
 
 ## Source-of-truth layout
 
@@ -91,6 +91,17 @@ Important implication:
 - and the staged release app is now the default quick-test launcher
 - `snes9x` appears to use macOS preferences / `NSUserDefaults`, not a simple text config file like `bsnes`
 
+Reliable launcher:
+
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh`
+
+Verified load example:
+
+```sh
+/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh \
+  "/Users/theysayheygreg/Documents/SNES/emulator-ready/Super Mario World (USA).sfc"
+```
+
 ## Current emulator app paths
 
 Practical GUI launchers currently staged for this Mac:
@@ -104,10 +115,15 @@ Practical GUI launchers currently staged for this Mac:
 
 Current preferred quick-test order:
 
-1. `bsnes` native Metal test build
-2. `snes9x` release app
-3. `bsnes` Rosetta workaround lane if needed for comparison
-3. real hardware via `sd2snes` when we have stronger standalone ROM artifacts
+1. `snes9x` release app
+2. real hardware via `sd2snes` when we have stronger standalone ROM artifacts
+3. `bsnes` only when we are explicitly doing renderer/debug R&D
+
+Current `bsnes` checkpoint:
+
+- the Metal branch can now present a visible native window surface on Apple Silicon
+- the remaining bug is real-frame upload, so `bsnes` stays parked as R&D
+- do not spend routine ROM-testing time there unless we deliberately re-open that engineering task
 
 ## Refresh workflow
 

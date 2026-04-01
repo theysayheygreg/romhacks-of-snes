@@ -59,11 +59,26 @@ Verified:
 
 - Metal-enabled app builds cleanly on this Mac
 - live `bsnes` settings currently resolve to `Driver: Metal`
+- the macOS window/compositor path is now real and visible
+- a flat-color debug shader produced a visible magenta surface in the loaded game window
 
 Still pending:
 
-- manual visual verification that ROM output renders correctly in the Metal build
+- real SNES frame upload through the Metal texture path
 - comparison against the `snes9x` reference lane using the same ROMs
+
+## Current checkpoint
+
+The useful architectural result of this branch is:
+
+- native Metal surface in the `bsnes` window works
+- sibling-host/surface composition works on this Mac
+- the remaining bug is constrained to the real-frame upload / pixel-format path
+
+Practical conclusion:
+
+- this branch is worth keeping as a checkpointed R&D lane
+- it is not yet good enough to replace `snes9x` as the practical testing emulator on this Mac
 
 ## Why this was the chosen fix
 
