@@ -19,18 +19,21 @@ It is not a full session transcript.
 - Second standalone SMW ROM artifact note for a visible gameplay patch.
 - `apply_smw_starting_lives_09.sh` helper for producing a checksum-fixed SMW gameplay test ROM.
 - `smw-starting-lives-09.asm` as the first visible gameplay patch in the SMW lane.
+- App-path-aware `snes9x` launcher and DualSense setup helpers so staged release builds and source-built test apps can share the same harness.
 
 ### Changed
 
 - Standardized the practical macOS emulator lane on `snes9x` while parking `bsnes` as renderer/debug R&D.
 - Extended the SMW lane from header-only artifact generation to a real gameplay-state patch workflow.
 - Added a reusable DualSense setup path for the staged `snes9x` app on this Mac.
+- Added a separate `snes9x` controller-test app with a stronger analog-stick dead zone for local drift comparison.
 
 ### Verified
 
 - SMW U start-lives patch at `00:9E24` changes the initialization immediate from `#$04` to the internal value `#$08`, which displays as 9 lives in-game.
 - `smw-starting-lives-09.sfc` boots correctly in `snes9x` with the expected 9 starting lives behavior.
 - The staged `snes9x` app now accepts the connected DualSense as Player 1 through the workspace setup helper.
+- A source-built universal `Snes9x.app` with a `0.5` stick dead zone launches correctly on this Mac as a separate test lane.
 
 ## 2026-03-09
 

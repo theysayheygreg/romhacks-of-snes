@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-APP="/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app"
+APP="${APP:-/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app}"
 DB="$APP/Contents/Frameworks/snes9x_framework.framework/Versions/A/Resources/gamecontrollerdb.txt"
 PREF_PLIST="$HOME/Library/Preferences/com.snes9x.macos.snes9x.plist"
 PREF_DOMAIN="com.snes9x.macos.snes9x"
@@ -75,10 +75,10 @@ device_key = sys.argv[3]
 player_key = sys.argv[4]
 
 mapping = {
-    "0": "75:0",
-    "1": "75:4",
-    "2": "75:6",
-    "3": "75:2",
+    "0": "69:0",
+    "1": "69:255",
+    "2": "68:0",
+    "3": "68:255",
     "4": "52:0",
     "5": "53:0",
     "6": "55:0",

@@ -76,6 +76,7 @@ Recommended path targets:
 The current practical `snes9x` app lane is:
 
 - `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app`
+- `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app` for custom controller testing
 
 Expected app-level paths:
 
@@ -104,12 +105,22 @@ Current controller note:
 - the connected PS5 DualSense is seen by `Snes9x` as device key `1356:3302:0`
 - local `Snes9x 1.63` shipped without the matching macOS PS5 SDL mapping
 - the workspace helper patches that app bundle resource and installs a direct Player 1 binding set for the local DualSense HID cookies
+- directional movement is currently bound to the DualSense left stick because `Snes9x` stores only one input per SNES direction in prefs
+- both helpers accept `APP=...` overrides so the stable app and source-built controller experiments can reuse the same harness
 
 Verified load example:
 
 ```sh
 /Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh \
   "/Users/theysayheygreg/Documents/SNES/emulator-ready/Super Mario World (USA).sfc"
+```
+
+Custom build load example:
+
+```sh
+APP="/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app" \
+  /Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh \
+  "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/build/smw-starting-lives-09.sfc"
 ```
 
 ## Current emulator app paths
@@ -122,6 +133,8 @@ Practical GUI launchers currently staged for this Mac:
   - `/Users/theysayheygreg/Documents/SNES/emulators/bsnes-x86_64-20260309.app`
 - `snes9x` release app:
   - `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app`
+- `snes9x` dead-zone controller test app:
+  - `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app`
 
 Current preferred quick-test order:
 

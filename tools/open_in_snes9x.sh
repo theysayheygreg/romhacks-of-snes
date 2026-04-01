@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-APP="/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app"
+APP="${APP:-/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app}"
 
 if [ "$#" -ne 1 ]; then
   echo "usage: $0 /absolute/path/to/rom.sfc" >&2

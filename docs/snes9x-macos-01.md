@@ -10,6 +10,10 @@ Staged app:
 
 - `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app`
 
+Current custom controller-test app:
+
+- `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app`
+
 Source archive used:
 
 - `https://github.com/snes9xgit/snes9x/releases/download/1.63/snes9x-1.63-Mac.zip`
@@ -29,10 +33,12 @@ Verified runtime facts on this Mac:
 - the connected PS5 DualSense is detected by `Snes9x` as vendor `0x054c`, product `0x0ce6`
 - the staged release app needed an updated `gamecontrollerdb.txt` entry because the bundled DB lacked the upstream macOS PS5 mapping
 - the most reliable local fix is to write the DualSense HID cookie bindings directly into `Snes9x` prefs for this machine
+- the current workspace mapping uses the DualSense left stick for SNES directions
 - the reliable scripted launcher is:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh`
 - the reliable DualSense setup helper is:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/setup_snes9x_dualsense.sh`
+- both helpers now accept `APP=/absolute/path/to/Snes9x.app` so the stable lane and custom test builds can share the same workflow
 
 ## Why this is the current practical lane
 
@@ -55,6 +61,8 @@ Observed note:
 
 - the simplest working launcher in this workspace is now a plain `open -a` helper script
 - the simplest controller fix is to patch the staged app bundle's SDL controller database with the upstream PS5 macOS mapping and then install a direct DualSense binding set for `1356:3302:0`
+- `Snes9x` persists only one input per SNES direction in prefs, so this local setup uses the left stick rather than duplicating both stick and D-pad
+- a custom source-built app now exists with a firmer `0.5` left-stick dead zone for drift testing on this older DualSense
 
 ## Workspace role
 
@@ -63,6 +71,13 @@ For this Mac, `snes9x` should be treated as:
 - the practical GUI emulator lane for quick ROM testing
 - the default runtime lane while `bsnes` remains in R&D
 - the emulator we should keep using while the workspace returns to actual ROMhacking work
+
+Current status:
+
+- the stable release app remains the default day-to-day lane
+- the custom `deadzone-05` app is a side-by-side controller experiment lane
+- the DualSense is working as Player 1 in the stable harness
+- the first visible SMW gameplay patch boots and plays correctly through this setup
 
 `bsnes` still remains useful as:
 
