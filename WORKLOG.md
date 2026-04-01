@@ -22,6 +22,7 @@ Flow:
 - Turned the TAS research into machine-readable harness sketches and a lightweight validator so the workspace has concrete automation targets for all three anchor games.
 - Ingested `PJBoy/lua` into the Metroid lane and stood up the first concrete Super Metroid harness scenario plus a generic preflight runner.
 - Generated the first Metroid harness result artifact by running a clean preflight against the staged Super Metroid ROM and source Lua harness files.
+- Classified `sm_practice_hack` as a testing/instrumentation asset and pinned the first Metroid harness to an explicit early-game Landing Site -> Parlor candidate transition.
 
 ### 2026-03-09
 

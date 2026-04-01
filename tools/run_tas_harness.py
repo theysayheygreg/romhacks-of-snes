@@ -54,6 +54,7 @@ def main() -> int:
         "rom_sha256": sha256_file(rom_path) if rom_path.is_file() else None,
         "analysis_path": str(analysis_path),
         "entry_scripts": [str(p) for p in script_paths],
+        "candidate_transition": scenario["scenario"].get("candidate_transition"),
         "assertions": scenario["assertions"],
         "errors": errors
     }

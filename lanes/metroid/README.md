@@ -40,6 +40,7 @@ Current canonical lane notes:
 - `./vanilla-deep-dive-01.md`
 - `./plm-room-state-01.md`
 - `./tas-harness-01.md`
+- `./practice-hack-01.md`
 
 Backlog:
 

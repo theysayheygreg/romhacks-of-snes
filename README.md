@@ -69,6 +69,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `lanes/metroid/vanilla-deep-dive-01.md`: first practical vanilla Super Metroid reverse-engineering note
 - `lanes/metroid/plm-room-state-01.md`: first structural note on PLMs and room-state data in Super Metroid
 - `lanes/metroid/tas-harness-01.md`: first concrete Super Metroid TAS-harness note and scenario anchor
+- `lanes/metroid/practice-hack-01.md`: classification note for `sm_practice_hack` as a Metroid testing/instrumentation asset
 - `analysis/validation/super-metroid-known-door-transition-preflight.json`: first generated Metroid TAS-harness preflight artifact
 - `lanes/smw/INTAKE.md`: intake checklist for standing up the SMW lane with a base ROM and repos
 - `lanes/smw/lunar-magic-01.md`: local Lunar Magic tooling classification and supported-ROM notes
@@ -106,6 +107,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - The current Metroid anchor note lives in `lanes/metroid/vanilla-deep-dive-01.md`.
 - The current Metroid PLM/state companion note lives in `lanes/metroid/plm-room-state-01.md`.
 - The current Metroid TAS-harness note lives in `lanes/metroid/tas-harness-01.md`.
+- The current Metroid practice-hack note lives in `lanes/metroid/practice-hack-01.md`.
 - The current Zelda anchor note lives in `lanes/zelda/vanilla-deep-dive-01.md`.
 - The current SMW anchor note lives in `lanes/smw/vanilla-deep-dive-01.md`.
 - The SMW lane now has its first standalone ROM artifact and starter-template classification.

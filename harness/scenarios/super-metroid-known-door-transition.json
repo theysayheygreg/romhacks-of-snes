@@ -25,17 +25,28 @@
   "scenario": {
     "type": "level_or_room_smoke",
     "goal": "Verify that a known short room-to-door slice can become the first deterministic Super Metroid smoke test.",
+    "candidate_transition": {
+      "source_room": {
+        "name": "Landing Site",
+        "room_pointer": "0x91F8"
+      },
+      "destination_room": {
+        "name": "Parlor and Alcatraz",
+        "room_pointer": "0x92FD"
+      }
+    },
     "planned_flow": [
       "boot ROM",
-      "reach controllable Samus state",
-      "prepare one known door-transition setup",
+      "reach controllable Samus state in Landing Site",
+      "prepare the Landing Site to Parlor and Alcatraz transition",
       "assert transition-relevant state is sane before full replay automation is added"
     ]
   },
   "assertions": [
     "rom_boots",
     "game_state_is_controllable",
-    "room_pointer_is_present",
+    "source_room_pointer_matches_0x91F8",
+    "destination_room_pointer_matches_0x92FD_after_transition",
     "door_transition_function_is_observable",
     "source_lua_harness_files_exist"
   ],

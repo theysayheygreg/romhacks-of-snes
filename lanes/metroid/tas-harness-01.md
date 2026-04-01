@@ -16,6 +16,12 @@ Most relevant files in that repo for this lane:
 - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/Super Camhack.lua`
 - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/cross emu.lua`
 
+Complementary instrumentation asset:
+
+- `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/sm_practice_hack`
+- classification note:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/lanes/metroid/practice-hack-01.md`
+
 ## Why this is the first real harness lane
 
 This repo already gives us:
@@ -38,6 +44,17 @@ Its job is not to prove an entire run works. Its job is to prove one short stabl
 - ROM boots
 - Samus reaches controllable state
 - one known room/door transition setup is available as the first smoke-test target
+
+Current concrete candidate slice:
+
+- source room:
+  - `Landing Site`
+  - room pointer `0x91F8`
+- destination room:
+  - `Parlor and Alcatraz`
+  - room pointer `0x92FD`
+
+This is intentionally an early-game Crateria slice because it should be easier to reproduce and less fragile than something later in the route.
 
 ## Current implementation status
 
@@ -74,6 +91,8 @@ The next implementation step is:
    - `room_pointer`
    - `door_transition_function`
    - Samus control-ready state
+   - source room pointer `0x91F8`
+   - destination room pointer `0x92FD`
 4. emit pass/fail results into the same `analysis/validation/` path family
 
 ## Practical recommendation

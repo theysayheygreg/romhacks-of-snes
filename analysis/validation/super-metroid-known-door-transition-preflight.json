@@ -11,10 +11,21 @@
     "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/Super Hitbox + TAS.lua",
     "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/PJBoy-lua/cross emu.lua"
   ],
+  "candidate_transition": {
+    "source_room": {
+      "name": "Landing Site",
+      "room_pointer": "0x91F8"
+    },
+    "destination_room": {
+      "name": "Parlor and Alcatraz",
+      "room_pointer": "0x92FD"
+    }
+  },
   "assertions": [
     "rom_boots",
     "game_state_is_controllable",
-    "room_pointer_is_present",
+    "source_room_pointer_matches_0x91F8",
+    "destination_room_pointer_matches_0x92FD_after_transition",
     "door_transition_function_is_observable",
     "source_lua_harness_files_exist"
   ],
