@@ -7,7 +7,29 @@
     "preferred_host": "BizHawk",
     "alternate_hosts": [
       "lsnes",
-      "snes9x-rr"
+      "snes9x-rr",
+      "Snes9x"
+    ],
+    "manual_assist_fallback": "Snes9x"
+  },
+  "host_candidates": {
+    "BizHawk": [
+      "/Applications/BizHawk.app",
+      "/Applications/EmuHawk.app",
+      "/Users/theysayheygreg/Applications/BizHawk.app",
+      "/Users/theysayheygreg/Applications/EmuHawk.app"
+    ],
+    "lsnes": [
+      "/opt/homebrew/bin/lsnes",
+      "/usr/local/bin/lsnes"
+    ],
+    "snes9x-rr": [
+      "/Applications/snes9x-rr.app",
+      "/Users/theysayheygreg/Applications/snes9x-rr.app"
+    ],
+    "Snes9x": [
+      "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+      "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app"
     ]
   },
   "rom": {

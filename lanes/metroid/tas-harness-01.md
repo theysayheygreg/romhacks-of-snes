@@ -73,15 +73,24 @@ Right now the runner does preflight validation only:
 - verifies the referenced Lua harness files exist
 - records the ROM hash
 - records the intended host and assertion set
+- resolves which host is actually available on this Mac
 
 That is deliberately small. It gives us a real scenario object and result artifact now, without pretending we already have BizHawk automation wired on this Mac.
+
+Current host reality on this Mac:
+
+- preferred automation host remains `BizHawk`
+- but the official current BizHawk project does not provide a real Apple Silicon macOS lane
+- `lsnes` is not currently installed and is not available as a simple Homebrew formula here
+- so the runner now records a host-resolution result and can fall back to `Snes9x` as a manual-assist lane
 
 ## What to do next
 
 The next implementation step is:
 
 1. pick the actual host lane
-   - likely `BizHawk` first
+   - likely `BizHawk` first in principle
+   - but on this Mac the immediate fallback is `Snes9x` until a real TAS-capable host is installed
 2. define how the scenario loads
    - movie replay
    - savestate

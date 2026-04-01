@@ -26,6 +26,7 @@ It is not a full session transcript.
 - `lanes/metroid/tas-harness-01.md`, `harness/scenarios/super-metroid-known-door-transition.json`, and `tools/run_tas_harness.py` as the first concrete Metroid harness slice.
 - `analysis/validation/super-metroid-known-door-transition-preflight.json` as the first generated Metroid harness result artifact.
 - `lanes/metroid/practice-hack-01.md` as the first classification note for `sm_practice_hack` as a Metroid testing/instrumentation asset.
+- Host-resolution support in `tools/run_tas_harness.py` so harness artifacts can record whether they are in real automation or manual-assist fallback mode on this Mac.
 
 ### Changed
 

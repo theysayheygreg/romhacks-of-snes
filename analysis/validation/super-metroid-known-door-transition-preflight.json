@@ -3,6 +3,22 @@
   "status": "pass",
   "mode": "preflight_only",
   "runtime": "BizHawk",
+  "host_resolution": {
+    "preferred_host": "BizHawk",
+    "available_hosts": [
+      {
+        "host": "Snes9x",
+        "paths": [
+          "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+          "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app"
+        ],
+        "which": null
+      }
+    ],
+    "selected_host": "Snes9x",
+    "mode": "manual_assist",
+    "blocked_reason": "preferred host 'BizHawk' not available on this machine"
+  },
   "rom_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/roms/base/Super Metroid (Japan, USA) (En,Ja).sfc",
   "rom_sha256": "12b77c4bc9c1832cee8881244659065ee1d84c70c3d29e6eaf92e6798cc2ca72",
   "analysis_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/super-metroid-rom.json",
