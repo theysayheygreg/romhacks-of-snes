@@ -71,6 +71,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `lanes/metroid/tas-harness-01.md`: first concrete Super Metroid TAS-harness note and scenario anchor
 - `lanes/metroid/practice-hack-01.md`: classification note for `sm_practice_hack` as a Metroid testing/instrumentation asset
 - `analysis/validation/super-metroid-known-door-transition-preflight.json`: first generated Metroid TAS-harness preflight artifact
+- `analysis/validation/super-metroid-known-door-transition-manual-assist.json`: first generated Metroid manual-assist harness artifact for the current `Snes9x` host lane
 - `lanes/smw/INTAKE.md`: intake checklist for standing up the SMW lane with a base ROM and repos
 - `lanes/smw/lunar-magic-01.md`: local Lunar Magic tooling classification and supported-ROM notes
 - `lanes/smw/callisto-01.md`: Callisto build-system classification and workflow notes
@@ -96,6 +97,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - The current multiworld relevance note lives in `docs/multiworld-architecture-01.md`.
 - TAS-harness sketches now live in `data/tas-harnesses/` with a validator at `tools/validate_tas_harnesses.py`.
 - The first real Super Metroid harness scenario now lives in `harness/scenarios/super-metroid-known-door-transition.json` with a preflight runner at `tools/run_tas_harness.py`.
+- The current executable Metroid harness lane is `Snes9x` manual assist via `tools/run_tas_manual_assist.py`.
 - `snes/` is now a standalone git repository for the workspace itself.
 - Verified locally on this Mac:
   - `bsnes` source build

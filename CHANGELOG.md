@@ -27,6 +27,8 @@ It is not a full session transcript.
 - `analysis/validation/super-metroid-known-door-transition-preflight.json` as the first generated Metroid harness result artifact.
 - `lanes/metroid/practice-hack-01.md` as the first classification note for `sm_practice_hack` as a Metroid testing/instrumentation asset.
 - Host-resolution support in `tools/run_tas_harness.py` so harness artifacts can record whether they are in real automation or manual-assist fallback mode on this Mac.
+- `tools/run_tas_manual_assist.py` as the first operator-facing launcher for the current Metroid `Snes9x` manual-assist lane.
+- `analysis/validation/super-metroid-known-door-transition-manual-assist.json` as the first generated manual-assist harness artifact.
 
 ### Changed
 
@@ -42,6 +44,7 @@ It is not a full session transcript.
 - `smw-starting-lives-09.sfc` boots correctly in `snes9x` with the expected 9 starting lives behavior.
 - The staged `snes9x` app now accepts the connected DualSense as Player 1 through the workspace setup helper.
 - A source-built universal `Snes9x.app` with a `0.5` stick dead zone launches correctly on this Mac as a separate test lane.
+- The first Metroid harness slice can now launch through the local `Snes9x` app and emit a machine-readable manual-assist checklist artifact for operator verification.
 
 ## 2026-03-09
 

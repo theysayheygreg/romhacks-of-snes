@@ -57,6 +57,13 @@
         "room_pointer": "0x92FD"
       }
     },
+    "manual_assist_checklist": [
+      "boot the ROM and confirm the game starts cleanly",
+      "reach a controllable state in Landing Site",
+      "move into the first intended transition toward Parlor and Alcatraz",
+      "confirm the transition completes without hang or corruption",
+      "confirm control returns in the destination room"
+    ],
     "planned_flow": [
       "boot ROM",
       "reach controllable Samus state in Landing Site",
@@ -73,6 +80,7 @@
     "source_lua_harness_files_exist"
   ],
   "result": {
-    "preflight_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/super-metroid-known-door-transition-preflight.json"
+    "preflight_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/super-metroid-known-door-transition-preflight.json",
+    "manual_assist_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/super-metroid-known-door-transition-manual-assist.json"
   }
 }

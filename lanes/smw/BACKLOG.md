@@ -62,6 +62,7 @@ This backlog is for Super Mario World-specific work inside the SNES workspace.
   - evaluate `brunovalads/smw-stuff`
   - capture whether `BizHawk` or `snes9x-rr` is the better first replay/smoke-test host
   - define one short deterministic boot-to-overworld or boot-to-level smoke test
+  - build the first executable or manual-assist SMW harness after the Metroid slice settles
 
 ## Research Gaps
 

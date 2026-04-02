@@ -64,8 +64,12 @@ This workspace now has:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/harness/scenarios/super-metroid-known-door-transition.json`
 - a generic harness preflight runner at:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_harness.py`
+- a manual-assist launcher for the current macOS host reality at:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_manual_assist.py`
 - a generated preflight artifact at:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/super-metroid-known-door-transition-preflight.json`
+- a generated manual-assist artifact at:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/super-metroid-known-door-transition-manual-assist.json`
 
 Right now the runner does preflight validation only:
 
@@ -88,21 +92,15 @@ Current host reality on this Mac:
 
 The next implementation step is:
 
-1. pick the actual host lane
-   - likely `BizHawk` first in principle
-   - but on this Mac the immediate fallback is `Snes9x` until a real TAS-capable host is installed
-2. define how the scenario loads
-   - movie replay
-   - savestate
-   - scripted boot path
-3. bind the first real assertions
+1. bind the first real assertions
    - `game_state`
    - `room_pointer`
    - `door_transition_function`
    - Samus control-ready state
    - source room pointer `0x91F8`
    - destination room pointer `0x92FD`
-4. emit pass/fail results into the same `analysis/validation/` path family
+2. replace manual assist with true host automation once a TAS-capable host is available
+3. emit pass/fail results into the same `analysis/validation/` path family
 
 ## Practical recommendation
 

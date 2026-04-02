@@ -1,0 +1,26 @@
+{
+  "scenario_id": "super-metroid-known-door-transition",
+  "status": "pending_operator",
+  "mode": "manual_assist",
+  "selected_host": "Snes9x",
+  "app_path": "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+  "rom_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/roms/base/Super Metroid (Japan, USA) (En,Ja).sfc",
+  "rom_sha256": "12b77c4bc9c1832cee8881244659065ee1d84c70c3d29e6eaf92e6798cc2ca72",
+  "candidate_transition": {
+    "source_room": {
+      "name": "Landing Site",
+      "room_pointer": "0x91F8"
+    },
+    "destination_room": {
+      "name": "Parlor and Alcatraz",
+      "room_pointer": "0x92FD"
+    }
+  },
+  "checklist": [
+    "boot the ROM and confirm the game starts cleanly",
+    "reach a controllable state in Landing Site",
+    "move into the first intended transition toward Parlor and Alcatraz",
+    "confirm the transition completes without hang or corruption",
+    "confirm control returns in the destination room"
+  ]
+}

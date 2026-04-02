@@ -23,6 +23,7 @@ Flow:
 - Ingested `PJBoy/lua` into the Metroid lane and stood up the first concrete Super Metroid harness scenario plus a generic preflight runner.
 - Generated the first Metroid harness result artifact by running a clean preflight against the staged Super Metroid ROM and source Lua harness files.
 - Classified `sm_practice_hack` as a testing/instrumentation asset and pinned the first Metroid harness to an explicit early-game Landing Site -> Parlor candidate transition.
+- Added a `Snes9x` manual-assist launcher for the first Metroid harness slice and emitted the first operator-facing manual-assist artifact for the Landing Site -> Parlor transition checklist.
 
 ### 2026-03-09
 
