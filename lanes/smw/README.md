@@ -30,6 +30,7 @@ Current lane artifacts:
 - `./smw-project-template-01.md`
 - `./standalone-rom-01.md`
 - `./standalone-rom-02.md`
+- `./tas-harness-01.md`
 
 Current status:
 
@@ -41,6 +42,7 @@ Current status:
 - first vanilla deep-dive pass completed
 - first standalone SMW ROM artifact produced via a low-risk patch-first lane
 - first visible gameplay SMW ROM artifact produced via a start-lives patch
+- first SMW manual-assist harness lane produced for the visible start-lives patch artifact
 
 Use this lane for future additions like:
 

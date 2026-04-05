@@ -25,6 +25,7 @@ Flow:
 - Classified `sm_practice_hack` as a testing/instrumentation asset and pinned the first Metroid harness to an explicit early-game Landing Site -> Parlor candidate transition.
 - Added a `Snes9x` manual-assist launcher for the first Metroid harness slice and emitted the first operator-facing manual-assist artifact for the Landing Site -> Parlor transition checklist.
 - Added a companion completion tool so the Metroid manual-assist slice can now record pass/fail checklist results instead of stopping at `pending_operator`.
+- Duplicated the same harness pattern into the SMW lane with a first visible-state manual-assist slice for the `smw-starting-lives-09.sfc` patch artifact.
 
 ### 2026-03-09
 

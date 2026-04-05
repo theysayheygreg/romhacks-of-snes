@@ -1,0 +1,82 @@
+{
+  "id": "smw-starting-lives-09",
+  "game": "Super Mario World",
+  "lane": "smw",
+  "status": "manual_assist",
+  "runtime": {
+    "preferred_host": "BizHawk",
+    "alternate_hosts": [
+      "snes9x-rr",
+      "lsnes",
+      "Snes9x"
+    ],
+    "manual_assist_fallback": "Snes9x"
+  },
+  "host_candidates": {
+    "BizHawk": [
+      "/Applications/BizHawk.app",
+      "/Applications/EmuHawk.app",
+      "/Users/theysayheygreg/Applications/BizHawk.app",
+      "/Users/theysayheygreg/Applications/EmuHawk.app"
+    ],
+    "lsnes": [
+      "/opt/homebrew/bin/lsnes",
+      "/usr/local/bin/lsnes"
+    ],
+    "snes9x-rr": [
+      "/Applications/snes9x-rr.app",
+      "/Users/theysayheygreg/Applications/snes9x-rr.app"
+    ],
+    "Snes9x": [
+      "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+      "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app"
+    ]
+  },
+  "rom": {
+    "path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/build/smw-starting-lives-09.sfc",
+    "analysis": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/smw-starting-lives-09-rom.json"
+  },
+  "source_harness": {
+    "repo": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes",
+    "entry_scripts": [
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_harness.py",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_manual_assist.py",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/complete_tas_manual_assist.py"
+    ]
+  },
+  "scenario": {
+    "type": "ram_assert",
+    "goal": "Verify that the visible SMW starting-lives patch boots cleanly and displays 9 lives on a fresh file.",
+    "manual_assist_checklist": [
+      "boot the patched ROM and confirm it reaches the title screen cleanly",
+      "start a fresh save file",
+      "choose 1 player game",
+      "confirm the overworld loads without hang or corruption",
+      "confirm Mario displays 9 lives at the first controllable overworld state"
+    ],
+    "expected_visible_state": {
+      "internal_title": "SMW START 09 LIVES",
+      "displayed_lives": 9
+    },
+    "planned_flow": [
+      "boot patched ROM",
+      "create or select a fresh save",
+      "start 1-player game",
+      "confirm first controllable overworld state",
+      "check visible life count"
+    ]
+  },
+  "assertions": [
+    "patched_rom_boots",
+    "fresh_save_file_creation_succeeds",
+    "one_player_game_starts",
+    "overworld_is_visible_and_responsive",
+    "displayed_lives_match_9",
+    "source_harness_files_exist"
+  ],
+  "result": {
+    "preflight_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/smw-starting-lives-09-preflight.json",
+    "manual_assist_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/smw-starting-lives-09-manual-assist.json"
+  }
+}

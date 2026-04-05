@@ -1,0 +1,57 @@
+{
+  "scenario_id": "smw-starting-lives-09",
+  "status": "pending_operator",
+  "mode": "manual_assist",
+  "selected_host": "Snes9x",
+  "app_path": "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+  "rom_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/build/smw-starting-lives-09.sfc",
+  "rom_sha256": "a617033b376547ce4e2adbc4280e678d7ca6eabea91211a3925544eed568eef2",
+  "candidate_transition": null,
+  "assertions": [
+    "patched_rom_boots",
+    "fresh_save_file_creation_succeeds",
+    "one_player_game_starts",
+    "overworld_is_visible_and_responsive",
+    "displayed_lives_match_9",
+    "source_harness_files_exist"
+  ],
+  "checklist": [
+    "boot the patched ROM and confirm it reaches the title screen cleanly",
+    "start a fresh save file",
+    "choose 1 player game",
+    "confirm the overworld loads without hang or corruption",
+    "confirm Mario displays 9 lives at the first controllable overworld state"
+  ],
+  "checklist_results": [
+    {
+      "item": "boot the patched ROM and confirm it reaches the title screen cleanly",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "start a fresh save file",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "choose 1 player game",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm the overworld loads without hang or corruption",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm Mario displays 9 lives at the first controllable overworld state",
+      "status": "pending",
+      "notes": null
+    }
+  ],
+  "started_at": "2026-04-05T17:27:49.030741+00:00",
+  "completed_at": null,
+  "operator_notes": null,
+  "launch_attempted": false,
+  "launch_status": "skipped"
+}
