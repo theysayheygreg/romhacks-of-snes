@@ -7,6 +7,7 @@ import os
 import subprocess
 from pathlib import Path
 import sys
+from datetime import datetime, timezone
 
 from run_tas_harness import load_json, resolve_host, sha256_file
 
@@ -17,6 +18,7 @@ SNES9X_OPEN = Path("/Users/theysayheygreg/clawd/projects/reverse-engineering-gam
 def main() -> int:
     parser = argparse.ArgumentParser(description="Launch a TAS harness scenario in manual-assist mode.")
     parser.add_argument("scenario", help="Absolute path to a harness scenario manifest JSON file.")
+    parser.add_argument("--no-launch", action="store_true", help="Write the pending artifact without launching the emulator app.")
     args = parser.parse_args()
 
     scenario_path = Path(args.scenario)
@@ -56,12 +58,6 @@ def main() -> int:
     result_path = Path(scenario["result"]["manual_assist_artifact"])
     checklist = scenario["scenario"].get("manual_assist_checklist", [])
 
-    subprocess.run(
-        [str(SNES9X_OPEN), str(rom_path)],
-        check=True,
-        env={**os.environ, "APP": app_path},
-    )
-
     result = {
         "scenario_id": scenario["id"],
         "status": "pending_operator",
@@ -71,10 +67,30 @@ def main() -> int:
         "rom_path": str(rom_path),
         "rom_sha256": sha256_file(rom_path),
         "candidate_transition": scenario["scenario"].get("candidate_transition"),
+        "assertions": scenario["assertions"],
         "checklist": checklist,
+        "checklist_results": [
+            {"item": item, "status": "pending", "notes": None}
+            for item in checklist
+        ],
+        "started_at": datetime.now(timezone.utc).isoformat(),
+        "completed_at": None,
+        "operator_notes": None,
+        "launch_attempted": not args.no_launch,
+        "launch_status": "skipped" if args.no_launch else "pending",
     }
 
     result_path.parent.mkdir(parents=True, exist_ok=True)
+    if not args.no_launch:
+        try:
+            subprocess.run(
+                [str(SNES9X_OPEN), str(rom_path)],
+                check=True,
+                env={**os.environ, "APP": app_path},
+            )
+            result["launch_status"] = "ok"
+        except subprocess.CalledProcessError as error:
+            result["launch_status"] = f"failed:{error.returncode}"
     result_path.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))
     return 0

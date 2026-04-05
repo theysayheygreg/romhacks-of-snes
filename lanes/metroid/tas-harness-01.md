@@ -66,18 +66,18 @@ This workspace now has:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_harness.py`
 - a manual-assist launcher for the current macOS host reality at:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_manual_assist.py`
+- a manual-assist completion tool for recording pass/fail results at:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/complete_tas_manual_assist.py`
 - a generated preflight artifact at:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/super-metroid-known-door-transition-preflight.json`
 - a generated manual-assist artifact at:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/super-metroid-known-door-transition-manual-assist.json`
 
-Right now the runner does preflight validation only:
+Right now the runner chain does three small things:
 
-- verifies the ROM exists
-- verifies the referenced Lua harness files exist
-- records the ROM hash
-- records the intended host and assertion set
-- resolves which host is actually available on this Mac
+- preflight verifies the ROM, source scripts, and host resolution
+- manual-assist preparation writes a pending operator artifact and can optionally launch `Snes9x`
+- manual-assist completion turns that pending artifact into a pass/fail result with checklist-item status and notes
 
 That is deliberately small. It gives us a real scenario object and result artifact now, without pretending we already have BizHawk automation wired on this Mac.
 
@@ -100,7 +100,7 @@ The next implementation step is:
    - source room pointer `0x91F8`
    - destination room pointer `0x92FD`
 2. replace manual assist with true host automation once a TAS-capable host is available
-3. emit pass/fail results into the same `analysis/validation/` path family
+3. convert operator completion into actual machine-observed assertions when a better host exists
 
 ## Practical recommendation
 

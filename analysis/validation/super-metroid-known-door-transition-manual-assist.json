@@ -16,11 +16,51 @@
       "room_pointer": "0x92FD"
     }
   },
+  "assertions": [
+    "rom_boots",
+    "game_state_is_controllable",
+    "source_room_pointer_matches_0x91F8",
+    "destination_room_pointer_matches_0x92FD_after_transition",
+    "door_transition_function_is_observable",
+    "source_lua_harness_files_exist"
+  ],
   "checklist": [
     "boot the ROM and confirm the game starts cleanly",
     "reach a controllable state in Landing Site",
     "move into the first intended transition toward Parlor and Alcatraz",
     "confirm the transition completes without hang or corruption",
     "confirm control returns in the destination room"
-  ]
+  ],
+  "checklist_results": [
+    {
+      "item": "boot the ROM and confirm the game starts cleanly",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "reach a controllable state in Landing Site",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "move into the first intended transition toward Parlor and Alcatraz",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm the transition completes without hang or corruption",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm control returns in the destination room",
+      "status": "pending",
+      "notes": null
+    }
+  ],
+  "started_at": "2026-04-05T17:25:40.306401+00:00",
+  "completed_at": null,
+  "operator_notes": null,
+  "launch_attempted": false,
+  "launch_status": "skipped"
 }

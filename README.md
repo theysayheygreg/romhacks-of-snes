@@ -98,6 +98,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - TAS-harness sketches now live in `data/tas-harnesses/` with a validator at `tools/validate_tas_harnesses.py`.
 - The first real Super Metroid harness scenario now lives in `harness/scenarios/super-metroid-known-door-transition.json` with a preflight runner at `tools/run_tas_harness.py`.
 - The current executable Metroid harness lane is `Snes9x` manual assist via `tools/run_tas_manual_assist.py`.
+- The current manual-assist completion step is recorded through `tools/complete_tas_manual_assist.py`.
 - `snes/` is now a standalone git repository for the workspace itself.
 - Verified locally on this Mac:
   - `bsnes` source build
