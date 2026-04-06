@@ -32,6 +32,8 @@ It is not a full session transcript.
 - `analysis/validation/super-metroid-known-door-transition-manual-assist.json` as the first generated manual-assist harness artifact.
 - `lanes/smw/tas-harness-01.md` and `harness/scenarios/smw-starting-lives-09.json` as the first concrete SMW manual-assist harness lane.
 - `analysis/validation/smw-starting-lives-09-preflight.json` and `analysis/validation/smw-starting-lives-09-manual-assist.json` as the first generated SMW harness artifacts.
+- `lanes/zelda/tas-harness-01.md` and `harness/scenarios/zelda3-fresh-file-boot.json` as the first concrete Zelda manual-assist harness lane.
+- `analysis/validation/zelda3-fresh-file-boot-preflight.json` and `analysis/validation/zelda3-fresh-file-boot-manual-assist.json` as the first generated Zelda harness artifacts.
 
 ### Changed
 
@@ -50,6 +52,8 @@ It is not a full session transcript.
 - The first Metroid harness slice can now launch through the local `Snes9x` app and emit a machine-readable manual-assist checklist artifact for operator verification.
 - The first Metroid harness slice now has a concrete path from pending checklist artifact to final pass/fail result without needing full emulator automation yet.
 - The first SMW harness slice now uses the same preflight plus manual-assist plus completion flow against the visible start-lives patch ROM.
+- The first SMW harness slice is now recorded as a real `pass` result.
+- The first Zelda harness slice now uses the same preflight plus manual-assist flow against the exact-match JP base ROM.
 
 ## 2026-03-09
 

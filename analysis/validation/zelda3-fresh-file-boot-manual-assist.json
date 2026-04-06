@@ -1,0 +1,56 @@
+{
+  "scenario_id": "zelda3-fresh-file-boot",
+  "status": "pending_operator",
+  "mode": "manual_assist",
+  "selected_host": "Snes9x",
+  "app_path": "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+  "rom_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/roms/base/Zelda no Densetsu - Kamigami no Triforce (Japan).sfc",
+  "rom_sha256": "794e040b02c7591b59ad8843b51e7c619b88f87cddc6083a8e7a4027b96a2271",
+  "candidate_transition": null,
+  "assertions": [
+    "rom_boots",
+    "fresh_save_file_creation_succeeds",
+    "early_controllable_state_is_reached",
+    "visible_world_state_is_sane",
+    "source_harness_files_exist"
+  ],
+  "checklist": [
+    "boot the ROM and confirm it reaches the title screen cleanly",
+    "start a fresh save file",
+    "confirm the intro path reaches an early controllable in-game state",
+    "confirm the game does not hang or corrupt during file start",
+    "confirm the visible HUD and early world state look sane"
+  ],
+  "checklist_results": [
+    {
+      "item": "boot the ROM and confirm it reaches the title screen cleanly",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "start a fresh save file",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm the intro path reaches an early controllable in-game state",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm the game does not hang or corrupt during file start",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm the visible HUD and early world state look sane",
+      "status": "pending",
+      "notes": null
+    }
+  ],
+  "started_at": "2026-04-06T03:03:37.867214+00:00",
+  "completed_at": null,
+  "operator_notes": null,
+  "launch_attempted": false,
+  "launch_status": "skipped"
+}

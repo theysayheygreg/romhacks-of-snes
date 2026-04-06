@@ -1,0 +1,82 @@
+{
+  "id": "zelda3-fresh-file-boot",
+  "game": "The Legend of Zelda: A Link to the Past",
+  "lane": "zelda",
+  "status": "manual_assist",
+  "runtime": {
+    "preferred_host": "SNI",
+    "alternate_hosts": [
+      "BizHawk",
+      "lsnes",
+      "Snes9x"
+    ],
+    "manual_assist_fallback": "Snes9x"
+  },
+  "host_candidates": {
+    "SNI": [
+      "/opt/homebrew/bin/sni",
+      "/usr/local/bin/sni"
+    ],
+    "BizHawk": [
+      "/Applications/BizHawk.app",
+      "/Applications/EmuHawk.app",
+      "/Users/theysayheygreg/Applications/BizHawk.app",
+      "/Users/theysayheygreg/Applications/EmuHawk.app"
+    ],
+    "lsnes": [
+      "/opt/homebrew/bin/lsnes",
+      "/usr/local/bin/lsnes"
+    ],
+    "Snes9x": [
+      "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+      "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app"
+    ]
+  },
+  "rom": {
+    "path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/roms/base/Zelda no Densetsu - Kamigami no Triforce (Japan).sfc",
+    "analysis": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/zelda-jp-rom.json"
+  },
+  "source_harness": {
+    "repo": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes",
+    "entry_scripts": [
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_harness.py",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_manual_assist.py",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/complete_tas_manual_assist.py"
+    ]
+  },
+  "scenario": {
+    "type": "ram_assert",
+    "goal": "Verify that a fresh Zelda JP file boot reaches a stable controllable early-game state without hang or corruption.",
+    "manual_assist_checklist": [
+      "boot the ROM and confirm it reaches the title screen cleanly",
+      "start a fresh save file",
+      "confirm the intro path reaches an early controllable in-game state",
+      "confirm the game does not hang or corrupt during file start",
+      "confirm the visible HUD and early world state look sane"
+    ],
+    "expected_visible_state": {
+      "game": "Zelda no Densetsu - Kamigami no Triforce",
+      "fresh_file_boot": true,
+      "stable_early_state": true
+    },
+    "planned_flow": [
+      "boot base ROM",
+      "start fresh save",
+      "reach first controllable state",
+      "confirm no corruption or hang",
+      "treat this as the first ALTTP smoke-test anchor"
+    ]
+  },
+  "assertions": [
+    "rom_boots",
+    "fresh_save_file_creation_succeeds",
+    "early_controllable_state_is_reached",
+    "visible_world_state_is_sane",
+    "source_harness_files_exist"
+  ],
+  "result": {
+    "preflight_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/zelda3-fresh-file-boot-preflight.json",
+    "manual_assist_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/zelda3-fresh-file-boot-manual-assist.json"
+  }
+}

@@ -45,7 +45,7 @@ This backlog is for Zelda 3 / ALttP-specific work inside the SNES workspace.
 - [ ] Define the first ALTTP TAS-adjacent automation lane
   - evaluate `SNI` as the first memory/control harness
   - distinguish classic TAS tooling from emulator/hardware state interfaces
-  - define one deterministic boot-and-state-flag smoke test
+  - [x] define one deterministic boot-and-state-flag smoke test
 
 ## Research Gaps
 
