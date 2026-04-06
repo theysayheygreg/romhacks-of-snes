@@ -1,0 +1,93 @@
+{
+  "id": "zelda3-basic-world-state",
+  "game": "The Legend of Zelda: A Link to the Past",
+  "lane": "zelda",
+  "status": "manual_assist",
+  "runtime": {
+    "preferred_host": "SNI",
+    "alternate_hosts": [
+      "BizHawk",
+      "lsnes",
+      "Snes9x"
+    ],
+    "manual_assist_fallback": "Snes9x"
+  },
+  "host_candidates": {
+    "SNI": [
+      "/opt/homebrew/bin/sni",
+      "/usr/local/bin/sni"
+    ],
+    "BizHawk": [
+      "/Applications/BizHawk.app",
+      "/Applications/EmuHawk.app",
+      "/Users/theysayheygreg/Applications/BizHawk.app",
+      "/Users/theysayheygreg/Applications/EmuHawk.app"
+    ],
+    "lsnes": [
+      "/opt/homebrew/bin/lsnes",
+      "/usr/local/bin/lsnes"
+    ],
+    "Snes9x": [
+      "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+      "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app"
+    ]
+  },
+  "rom": {
+    "path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/roms/base/Zelda no Densetsu - Kamigami no Triforce (Japan).sfc",
+    "analysis": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/zelda-jp-rom.json"
+  },
+  "source_harness": {
+    "repo": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/jpdasm",
+    "entry_scripts": [
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_harness.py",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_manual_assist.py",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/complete_tas_manual_assist.py",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/jpdasm/symbols_wram.asm",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/jpdasm/symbols_sram.asm"
+    ]
+  },
+  "scenario": {
+    "type": "ram_assert",
+    "goal": "Verify that a fresh Zelda JP file boot presents sane early-world state against trusted WRAM/SRAM anchors.",
+    "manual_assist_checklist": [
+      "boot the ROM and start a fresh save file",
+      "reach an early controllable state without hang or corruption",
+      "confirm the game is in a plausible early mode and submode state",
+      "confirm visible HUD and world state are sane for a fresh file",
+      "confirm no obviously incorrect dungeon, room-flag, or macro-progression state is visible"
+    ],
+    "state_anchors": {
+      "MODE": "0x7E0010",
+      "SUBMODE": "0x7E0011",
+      "INDOORS": "0x7E001B",
+      "POSY": "0x7E0020",
+      "POSX": "0x7E0022",
+      "ROOM_FLAGS_WRAM_START": "0x7EF000",
+      "OverworldEventDataWRAM": "0x7EF280",
+      "InventoryTracking": "0x7EF38C",
+      "ProgressIndicator": "0x7EF3C5",
+      "CurrentWorld": "0x7EF3CA",
+      "FollowerIndicator": "0x7EF3CC"
+    },
+    "planned_flow": [
+      "boot base ROM",
+      "start fresh save",
+      "reach early controllable state",
+      "treat jpdasm and randomizer state anchors as the observation targets",
+      "use this as the bridge between visible smoke tests and future real state automation"
+    ]
+  },
+  "assertions": [
+    "rom_boots",
+    "fresh_save_file_creation_succeeds",
+    "early_controllable_state_is_reached",
+    "mode_and_submode_are_plausible",
+    "macro_progression_state_is_sane",
+    "source_harness_files_exist"
+  ],
+  "result": {
+    "preflight_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/zelda3-basic-world-state-preflight.json",
+    "manual_assist_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/zelda3-basic-world-state-manual-assist.json"
+  }
+}

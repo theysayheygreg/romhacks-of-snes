@@ -28,6 +28,7 @@ Flow:
 - Duplicated the same harness pattern into the SMW lane with a first visible-state manual-assist slice for the `smw-starting-lives-09.sfc` patch artifact.
 - Completed the first SMW manual-assist result as a real `pass` artifact based on the already-verified start-lives patch behavior.
 - Duplicated the same harness pattern into the Zelda lane with a first fresh-file boot manual-assist slice for the exact-match JP base ROM.
+- Added a second Zelda manual-assist slice that ties fresh-file smoke testing back to trusted `jpdasm` and randomizer WRAM/SRAM anchors for basic world-state sanity.
 
 ### 2026-03-09
 

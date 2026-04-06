@@ -27,6 +27,21 @@ Its job is to prove one short stable slice works:
 - the game reaches an early controllable state
 - visible HUD and world state look sane
 
+The second concrete scenario for this lane is:
+
+- `zelda3-basic-world-state`
+
+Its job is to keep the same short fresh-file slice, but tie it back to trusted Zelda state anchors:
+
+- `MODE = $7E0010`
+- `SUBMODE = $7E0011`
+- `INDOORS = $7E001B`
+- `ROOM_FLAGS_WRAM_START = $7EF000`
+- `OverworldEventDataWRAM = $7EF280`
+- `ProgressIndicator = $7EF3C5`
+- `CurrentWorld = $7EF3CA`
+- `FollowerIndicator = $7EF3CC`
+
 ## Current implementation status
 
 This workspace now has:
@@ -43,6 +58,10 @@ This workspace now has:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/zelda3-fresh-file-boot-preflight.json`
 - a generated manual-assist artifact at:
   - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/zelda3-fresh-file-boot-manual-assist.json`
+- a second world-state preflight artifact at:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/zelda3-basic-world-state-preflight.json`
+- a second world-state manual-assist artifact at:
+  - `/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/zelda3-basic-world-state-manual-assist.json`
 
 Current host reality on this Mac:
 
@@ -53,10 +72,11 @@ Current host reality on this Mac:
 ## What to do next
 
 1. run and complete the first Zelda manual-assist result
-2. add a stronger state-oriented Zelda slice
-   - basic world-state checks
+2. run and complete the world-state manual-assist result
+3. add one richer state-oriented Zelda slice after that
    - early room entry
-3. replace manual assist with better RAM-observation or interface automation when a worthwhile host exists locally
+   - stronger room-flag observation
+4. replace manual assist with better RAM-observation or interface automation when a worthwhile host exists locally
 
 ## Practical recommendation
 

@@ -34,6 +34,7 @@ It is not a full session transcript.
 - `analysis/validation/smw-starting-lives-09-preflight.json` and `analysis/validation/smw-starting-lives-09-manual-assist.json` as the first generated SMW harness artifacts.
 - `lanes/zelda/tas-harness-01.md` and `harness/scenarios/zelda3-fresh-file-boot.json` as the first concrete Zelda manual-assist harness lane.
 - `analysis/validation/zelda3-fresh-file-boot-preflight.json` and `analysis/validation/zelda3-fresh-file-boot-manual-assist.json` as the first generated Zelda harness artifacts.
+- `harness/scenarios/zelda3-basic-world-state.json` plus matching preflight and manual-assist artifacts as the second Zelda state-oriented harness slice.
 
 ### Changed
 
@@ -54,6 +55,7 @@ It is not a full session transcript.
 - The first SMW harness slice now uses the same preflight plus manual-assist plus completion flow against the visible start-lives patch ROM.
 - The first SMW harness slice is now recorded as a real `pass` result.
 - The first Zelda harness slice now uses the same preflight plus manual-assist flow against the exact-match JP base ROM.
+- The Zelda lane now has a second state-oriented manual-assist slice tied explicitly to `MODE`, `SUBMODE`, room flags, overworld event data, and macro-progression anchors.
 
 ## 2026-03-09
 

@@ -75,6 +75,8 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `lanes/zelda/tas-harness-01.md`: first concrete Zelda TAS-adjacent harness note anchored to fresh-file boot
 - `analysis/validation/zelda3-fresh-file-boot-preflight.json`: first generated Zelda harness preflight artifact
 - `analysis/validation/zelda3-fresh-file-boot-manual-assist.json`: first generated Zelda manual-assist harness artifact
+- `analysis/validation/zelda3-basic-world-state-preflight.json`: second Zelda harness preflight artifact anchored to trusted WRAM/SRAM state
+- `analysis/validation/zelda3-basic-world-state-manual-assist.json`: second Zelda manual-assist harness artifact for basic world-state sanity
 - `lanes/smw/INTAKE.md`: intake checklist for standing up the SMW lane with a base ROM and repos
 - `lanes/smw/lunar-magic-01.md`: local Lunar Magic tooling classification and supported-ROM notes
 - `lanes/smw/callisto-01.md`: Callisto build-system classification and workflow notes
@@ -104,6 +106,7 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - TAS-harness sketches now live in `data/tas-harnesses/` with a validator at `tools/validate_tas_harnesses.py`.
 - The first real Super Metroid harness scenario now lives in `harness/scenarios/super-metroid-known-door-transition.json` with a preflight runner at `tools/run_tas_harness.py`.
 - The first concrete Zelda harness scenario now lives in `harness/scenarios/zelda3-fresh-file-boot.json`.
+- The second Zelda harness scenario now lives in `harness/scenarios/zelda3-basic-world-state.json`.
 - The current executable Metroid harness lane is `Snes9x` manual assist via `tools/run_tas_manual_assist.py`.
 - The current manual-assist completion step is recorded through `tools/complete_tas_manual_assist.py`.
 - The first concrete SMW harness scenario now lives in `harness/scenarios/smw-starting-lives-09.json`.

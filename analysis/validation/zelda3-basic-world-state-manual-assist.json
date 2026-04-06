@@ -1,0 +1,57 @@
+{
+  "scenario_id": "zelda3-basic-world-state",
+  "status": "pending_operator",
+  "mode": "manual_assist",
+  "selected_host": "Snes9x",
+  "app_path": "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+  "rom_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/roms/base/Zelda no Densetsu - Kamigami no Triforce (Japan).sfc",
+  "rom_sha256": "794e040b02c7591b59ad8843b51e7c619b88f87cddc6083a8e7a4027b96a2271",
+  "candidate_transition": null,
+  "assertions": [
+    "rom_boots",
+    "fresh_save_file_creation_succeeds",
+    "early_controllable_state_is_reached",
+    "mode_and_submode_are_plausible",
+    "macro_progression_state_is_sane",
+    "source_harness_files_exist"
+  ],
+  "checklist": [
+    "boot the ROM and start a fresh save file",
+    "reach an early controllable state without hang or corruption",
+    "confirm the game is in a plausible early mode and submode state",
+    "confirm visible HUD and world state are sane for a fresh file",
+    "confirm no obviously incorrect dungeon, room-flag, or macro-progression state is visible"
+  ],
+  "checklist_results": [
+    {
+      "item": "boot the ROM and start a fresh save file",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "reach an early controllable state without hang or corruption",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm the game is in a plausible early mode and submode state",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm visible HUD and world state are sane for a fresh file",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm no obviously incorrect dungeon, room-flag, or macro-progression state is visible",
+      "status": "pending",
+      "notes": null
+    }
+  ],
+  "started_at": "2026-04-06T03:07:41.063089+00:00",
+  "completed_at": null,
+  "operator_notes": null,
+  "launch_attempted": false,
+  "launch_status": "skipped"
+}
