@@ -41,6 +41,7 @@ Current canonical lane notes:
 - `./plm-room-state-01.md`
 - `./tas-harness-01.md`
 - `./practice-hack-01.md`
+- `./standalone-rom-01.md`
 
 Backlog:
 

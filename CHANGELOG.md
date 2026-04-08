@@ -35,6 +35,8 @@ It is not a full session transcript.
 - `lanes/zelda/tas-harness-01.md` and `harness/scenarios/zelda3-fresh-file-boot.json` as the first concrete Zelda manual-assist harness lane.
 - `analysis/validation/zelda3-fresh-file-boot-preflight.json` and `analysis/validation/zelda3-fresh-file-boot-manual-assist.json` as the first generated Zelda harness artifacts.
 - `harness/scenarios/zelda3-basic-world-state.json` plus matching preflight and manual-assist artifacts as the second Zelda state-oriented harness slice.
+- `lanes/zelda/standalone-rom-01.md` and `analysis/zelda-general-bugfixes-rom.json` as the first durable standalone Zelda ROM artifact lane.
+- `patches/metroid/sm-starting-energy-199.asm`, `tools/apply_sm_starting_energy_199.sh`, `lanes/metroid/standalone-rom-01.md`, and `analysis/super-metroid-starting-energy-199-rom.json` as the first durable standalone Super Metroid ROM artifact lane.
 
 ### Changed
 
@@ -56,6 +58,7 @@ It is not a full session transcript.
 - The first SMW harness slice is now recorded as a real `pass` result.
 - The first Zelda harness slice now uses the same preflight plus manual-assist flow against the exact-match JP base ROM.
 - The Zelda lane now has a second state-oriented manual-assist slice tied explicitly to `MODE`, `SUBMODE`, room flags, overworld event data, and macro-progression anchors.
+- The workspace now has low-risk standalone ROM artifacts for Zelda, Super Metroid, and SMW.
 
 ## 2026-03-09
 

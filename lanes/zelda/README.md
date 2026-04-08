@@ -30,6 +30,7 @@ Use this lane for future additions like:
 Current anchor artifacts:
 
 - `./vanilla-deep-dive-01.md`
+- `./standalone-rom-01.md`
 - `./tas-harness-01.md`
 - `../../analysis/zelda-jp-key-symbols.json`
 
@@ -38,6 +39,7 @@ Current status:
 - active analysis lane
 - exact-match JP base ROM anchored through `jpdasm`
 - first vanilla deep-dive pass completed
+- first standalone Zelda ROM artifact produced via the general bugfix patch lane
 - first Zelda manual-assist harness lane produced for fresh-file boot smoke testing
 
 Backlog:

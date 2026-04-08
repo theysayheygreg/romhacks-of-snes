@@ -28,9 +28,9 @@ This backlog is for Zelda 3 / ALttP-specific work inside the SNES workspace.
   - item and world-state grammar
   - what kinds of hacks preserve versus transform the original feel
 
-- [ ] Produce one real standalone Zelda ROM artifact
-  - Prefer a small, safe data or config patch first.
-  - Keep it simple enough that we can later boot it on cartridge without ambiguity.
+- [x] Produce one real standalone Zelda ROM artifact
+  - [x] Prefer a small, safe data or config patch first.
+  - [x] Keep it simple enough that we can later boot it on cartridge without ambiguity.
 
 - [ ] Add Zelda-specific patch target notes
   - Safe early experiments

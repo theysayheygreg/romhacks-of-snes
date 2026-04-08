@@ -70,13 +70,17 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `lanes/metroid/plm-room-state-01.md`: first structural note on PLMs and room-state data in Super Metroid
 - `lanes/metroid/tas-harness-01.md`: first concrete Super Metroid TAS-harness note and scenario anchor
 - `lanes/metroid/practice-hack-01.md`: classification note for `sm_practice_hack` as a Metroid testing/instrumentation asset
+- `lanes/metroid/standalone-rom-01.md`: first standalone Super Metroid ROM artifact note
 - `analysis/validation/super-metroid-known-door-transition-preflight.json`: first generated Metroid TAS-harness preflight artifact
 - `analysis/validation/super-metroid-known-door-transition-manual-assist.json`: first generated Metroid manual-assist harness artifact for the current `Snes9x` host lane
+- `analysis/super-metroid-starting-energy-199-rom.json`: probe artifact for the first standalone Super Metroid ROM output
 - `lanes/zelda/tas-harness-01.md`: first concrete Zelda TAS-adjacent harness note anchored to fresh-file boot
+- `lanes/zelda/standalone-rom-01.md`: first standalone Zelda ROM artifact note
 - `analysis/validation/zelda3-fresh-file-boot-preflight.json`: first generated Zelda harness preflight artifact
 - `analysis/validation/zelda3-fresh-file-boot-manual-assist.json`: first generated Zelda manual-assist harness artifact
 - `analysis/validation/zelda3-basic-world-state-preflight.json`: second Zelda harness preflight artifact anchored to trusted WRAM/SRAM state
 - `analysis/validation/zelda3-basic-world-state-manual-assist.json`: second Zelda manual-assist harness artifact for basic world-state sanity
+- `analysis/zelda-general-bugfixes-rom.json`: probe artifact for the first standalone Zelda ROM output
 - `lanes/smw/INTAKE.md`: intake checklist for standing up the SMW lane with a base ROM and repos
 - `lanes/smw/lunar-magic-01.md`: local Lunar Magic tooling classification and supported-ROM notes
 - `lanes/smw/callisto-01.md`: Callisto build-system classification and workflow notes
@@ -122,10 +126,13 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - The current Metroid PLM/state companion note lives in `lanes/metroid/plm-room-state-01.md`.
 - The current Metroid TAS-harness note lives in `lanes/metroid/tas-harness-01.md`.
 - The current Metroid practice-hack note lives in `lanes/metroid/practice-hack-01.md`.
+- The current Metroid standalone-ROM note lives in `lanes/metroid/standalone-rom-01.md`.
 - The current Zelda anchor note lives in `lanes/zelda/vanilla-deep-dive-01.md`.
+- The current Zelda standalone-ROM note lives in `lanes/zelda/standalone-rom-01.md`.
 - The current Zelda TAS-harness note lives in `lanes/zelda/tas-harness-01.md`.
 - The current SMW anchor note lives in `lanes/smw/vanilla-deep-dive-01.md`.
 - The SMW lane now has its first standalone ROM artifact and starter-template classification.
+- The workspace now has low-risk standalone ROM artifacts for Zelda, Super Metroid, and SMW.
 - The current SMW TAS-harness note lives in `lanes/smw/tas-harness-01.md`.
 - `repos/supermetroid` exactly matches the local Super Metroid ROM by SHA-1 and is now the canonical Metroid source-reference lane.
 - `repos/jpdasm` exactly matches the local Zelda JP ROM by SHA-1/MD5 and is the canonical Zelda source-reference lane.

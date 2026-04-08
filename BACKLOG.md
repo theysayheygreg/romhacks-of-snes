@@ -17,8 +17,8 @@ Lane-specific work lives in:
   - [x] Confirm that `SMZ3` builds locally and runs on this Mac with `DOTNET_ROLL_FORWARD=Major`.
   - [x] Confirm that `MapRandomizer` is Mac-viable once submodules are hydrated.
   - [x] Produce one end-to-end documented path from patch input to a runnable ROM with `z3randomizer`.
-  - [ ] Produce one real standalone Zelda ROM artifact intended for eventual cartridge testing.
-  - [ ] Produce one real standalone Super Metroid ROM artifact intended for eventual cartridge testing.
+  - [x] Produce one real standalone Zelda ROM artifact intended for eventual cartridge testing.
+  - [x] Produce one real standalone Super Metroid ROM artifact intended for eventual cartridge testing.
   - [ ] Decide whether to keep using runtime roll-forward for `SMZ3` or add a dedicated `.NET 7` runtime lane.
 
 - [ ] Start filling the swim lanes with lane-specific artifacts
@@ -99,8 +99,8 @@ Lane-specific work lives in:
   - [x] Produce one first-pass shared note on multiworld relevance.
 
 - [ ] Build a “safe first mods” cookbook
-  - One low-risk patch example for Zelda
-  - One low-risk patch example for Super Metroid
+  - [x] One low-risk patch example for Zelda
+  - [x] One low-risk patch example for Super Metroid
   - [x] One low-risk patch or editor-driven modification for SMW
 
 - [ ] Stand up a TAS / deterministic smoke-test lane

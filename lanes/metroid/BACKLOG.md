@@ -31,9 +31,9 @@ This backlog is for Super Metroid-specific work inside the SNES workspace.
   - movement and topology grammar
   - what kinds of hacks preserve versus transform the original feel
 
-- [ ] Produce one real standalone Super Metroid ROM artifact
-  - Prefer a small, safe patch target first.
-  - Keep it simple enough that we can later boot it on cartridge without ambiguity.
+- [x] Produce one real standalone Super Metroid ROM artifact
+  - [x] Prefer a small, safe patch target first.
+  - [x] Keep it simple enough that we can later boot it on cartridge without ambiguity.
 
 - [ ] Add Super Metroid patch target notes
   - Low-risk ROM edits
