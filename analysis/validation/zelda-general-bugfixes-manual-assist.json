@@ -1,6 +1,6 @@
 {
   "scenario_id": "zelda-general-bugfixes",
-  "status": "pending_operator",
+  "status": "fail",
   "mode": "manual_assist",
   "selected_host": "Snes9x",
   "app_path": "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
@@ -24,33 +24,33 @@
   "checklist_results": [
     {
       "item": "boot the patched ROM and confirm it reaches the title screen cleanly",
-      "status": "pending",
+      "status": "fail",
       "notes": null
     },
     {
       "item": "start or load into a normal early-game state without hang or corruption",
-      "status": "pending",
+      "status": "fail",
       "notes": null
     },
     {
       "item": "confirm visible HUD and world state look sane",
-      "status": "pending",
+      "status": "fail",
       "notes": null
     },
     {
       "item": "confirm no obvious file-start or screen-transition regressions are visible",
-      "status": "pending",
+      "status": "fail",
       "notes": null
     },
     {
       "item": "confirm the artifact feels like a clean bugfix patch rather than a broken conversion",
-      "status": "pending",
+      "status": "fail",
       "notes": null
     }
   ],
-  "started_at": "2026-04-14T19:51:33.984899+00:00",
-  "completed_at": null,
-  "operator_notes": null,
-  "launch_attempted": false,
-  "launch_status": "skipped"
+  "started_at": "2026-04-14T20:03:29.265982+00:00",
+  "completed_at": "2026-04-14T20:08:03.810785+00:00",
+  "operator_notes": "Loaded in Snes9x, but the ROM appeared to hang or crash as soon as the window was clicked. This behavior was observed on both standalone patched ROM artifacts, so the failure may be in the emulator/input interaction path rather than the patch logic itself.",
+  "launch_attempted": true,
+  "launch_status": "ok"
 }

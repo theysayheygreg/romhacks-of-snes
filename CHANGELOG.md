@@ -62,6 +62,7 @@ It is not a full session transcript.
 - The Zelda lane now has a second state-oriented manual-assist slice tied explicitly to `MODE`, `SUBMODE`, room flags, overworld event data, and macro-progression anchors.
 - The workspace now has low-risk standalone ROM artifacts for Zelda, Super Metroid, and SMW.
 - The promoted standalone Zelda and Metroid ROM outputs are now wired into the same harness/preflight/manual-assist flow as the earlier lane-specific smoke tests.
+- The first manual-assist runs against the promoted standalone Zelda and Metroid outputs are now recorded as failed results, with a shared note that the common click-triggered hang pattern may indicate an emulator/input-path issue rather than two independent patch regressions.
 
 ## 2026-03-09
 

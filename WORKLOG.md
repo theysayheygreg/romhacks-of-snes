@@ -32,6 +32,7 @@ Flow:
 - Promoted the existing Zelda general-bugfix patch path into a stable standalone artifact with a durable output name and probe record.
 - Added the first standalone Super Metroid gameplay-state artifact by patching the vanilla new-file starting energy from 99 to 199.
 - Added dedicated harness scenarios and pending operator artifacts for the standalone Zelda general-bugfix ROM and the standalone Metroid 199-energy ROM so both promoted outputs are now first-class validation targets.
+- Ran the first manual-assist checks for the standalone Zelda and Metroid artifacts; both loaded in `Snes9x` but appeared to hang or crash immediately after window interaction, so both result artifacts are now recorded as `fail` pending a base-ROM control check and emulator/input-path sanity pass.
 
 ### 2026-03-09
 
