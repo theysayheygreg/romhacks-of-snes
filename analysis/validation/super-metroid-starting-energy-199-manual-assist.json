@@ -1,0 +1,56 @@
+{
+  "scenario_id": "super-metroid-starting-energy-199",
+  "status": "pending_operator",
+  "mode": "manual_assist",
+  "selected_host": "Snes9x",
+  "app_path": "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+  "rom_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/build/super-metroid-starting-energy-199.sfc",
+  "rom_sha256": "06a9868b9a73eea2109b6e823d89d5c8a290597195c2fa455e7c23a0273b560e",
+  "candidate_transition": null,
+  "assertions": [
+    "patched_rom_boots",
+    "fresh_file_creation_succeeds",
+    "first_controllable_state_is_reached",
+    "visible_energy_matches_199",
+    "source_harness_files_exist"
+  ],
+  "checklist": [
+    "boot the patched ROM and confirm it reaches the file-select path cleanly",
+    "start a fresh file without hang or corruption",
+    "reach the first controllable gameplay state",
+    "confirm Samus starts with visible 199 energy instead of vanilla 99",
+    "confirm no immediate startup regressions are visible"
+  ],
+  "checklist_results": [
+    {
+      "item": "boot the patched ROM and confirm it reaches the file-select path cleanly",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "start a fresh file without hang or corruption",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "reach the first controllable gameplay state",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm Samus starts with visible 199 energy instead of vanilla 99",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm no immediate startup regressions are visible",
+      "status": "pending",
+      "notes": null
+    }
+  ],
+  "started_at": "2026-04-14T19:51:33.985452+00:00",
+  "completed_at": null,
+  "operator_notes": null,
+  "launch_attempted": false,
+  "launch_status": "skipped"
+}

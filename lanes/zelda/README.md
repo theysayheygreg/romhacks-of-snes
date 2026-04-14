@@ -41,6 +41,7 @@ Current status:
 - first vanilla deep-dive pass completed
 - first standalone Zelda ROM artifact produced via the general bugfix patch lane
 - first Zelda manual-assist harness lane produced for fresh-file boot smoke testing
+- standalone Zelda artifact now also has its own manual-assist harness scenario and pending operator checklist
 
 Backlog:
 

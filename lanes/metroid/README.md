@@ -43,6 +43,13 @@ Current canonical lane notes:
 - `./practice-hack-01.md`
 - `./standalone-rom-01.md`
 
+Current status:
+
+- active analysis lane
+- exact-match base ROM anchored through `supermetroid`
+- first Metroid TAS/manual-assist harness slice exists for Landing Site -> Parlor
+- standalone Metroid artifact now also has its own manual-assist harness scenario and pending operator checklist
+
 Backlog:
 
 - `./BACKLOG.md`

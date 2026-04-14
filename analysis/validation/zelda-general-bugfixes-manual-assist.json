@@ -1,0 +1,56 @@
+{
+  "scenario_id": "zelda-general-bugfixes",
+  "status": "pending_operator",
+  "mode": "manual_assist",
+  "selected_host": "Snes9x",
+  "app_path": "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+  "rom_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/build/zelda-general-bugfixes.sfc",
+  "rom_sha256": "80edf915f4e448259e90caa6272de9fe30a6845393047db4fbe5d4699f63d755",
+  "candidate_transition": null,
+  "assertions": [
+    "patched_rom_boots",
+    "title_screen_is_reached",
+    "early_playable_state_is_reached",
+    "visible_world_state_is_sane",
+    "source_harness_files_exist"
+  ],
+  "checklist": [
+    "boot the patched ROM and confirm it reaches the title screen cleanly",
+    "start or load into a normal early-game state without hang or corruption",
+    "confirm visible HUD and world state look sane",
+    "confirm no obvious file-start or screen-transition regressions are visible",
+    "confirm the artifact feels like a clean bugfix patch rather than a broken conversion"
+  ],
+  "checklist_results": [
+    {
+      "item": "boot the patched ROM and confirm it reaches the title screen cleanly",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "start or load into a normal early-game state without hang or corruption",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm visible HUD and world state look sane",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm no obvious file-start or screen-transition regressions are visible",
+      "status": "pending",
+      "notes": null
+    },
+    {
+      "item": "confirm the artifact feels like a clean bugfix patch rather than a broken conversion",
+      "status": "pending",
+      "notes": null
+    }
+  ],
+  "started_at": "2026-04-14T19:51:33.984899+00:00",
+  "completed_at": null,
+  "operator_notes": null,
+  "launch_attempted": false,
+  "launch_status": "skipped"
+}

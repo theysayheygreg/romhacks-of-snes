@@ -1,0 +1,81 @@
+{
+  "id": "zelda-general-bugfixes",
+  "game": "The Legend of Zelda: A Link to the Past",
+  "lane": "zelda",
+  "status": "manual_assist",
+  "runtime": {
+    "preferred_host": "SNI",
+    "alternate_hosts": [
+      "BizHawk",
+      "lsnes",
+      "Snes9x"
+    ],
+    "manual_assist_fallback": "Snes9x"
+  },
+  "host_candidates": {
+    "SNI": [
+      "/opt/homebrew/bin/sni",
+      "/usr/local/bin/sni"
+    ],
+    "BizHawk": [
+      "/Applications/BizHawk.app",
+      "/Applications/EmuHawk.app",
+      "/Users/theysayheygreg/Applications/BizHawk.app",
+      "/Users/theysayheygreg/Applications/EmuHawk.app"
+    ],
+    "lsnes": [
+      "/opt/homebrew/bin/lsnes",
+      "/usr/local/bin/lsnes"
+    ],
+    "Snes9x": [
+      "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+      "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app"
+    ]
+  },
+  "rom": {
+    "path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/build/zelda-general-bugfixes.sfc",
+    "analysis": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/zelda-general-bugfixes-rom.json"
+  },
+  "source_harness": {
+    "repo": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/z3randomizer",
+    "entry_scripts": [
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_harness.py",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_manual_assist.py",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/complete_tas_manual_assist.py",
+      "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/repos/z3randomizer/LTTP_RND_GeneralBugfixes.asm"
+    ]
+  },
+  "scenario": {
+    "type": "manual_assist_boot_smoke",
+    "goal": "Verify that the promoted Zelda general-bugfixes artifact boots cleanly and behaves like a sane patch-first JP Zelda image.",
+    "manual_assist_checklist": [
+      "boot the patched ROM and confirm it reaches the title screen cleanly",
+      "start or load into a normal early-game state without hang or corruption",
+      "confirm visible HUD and world state look sane",
+      "confirm no obvious file-start or screen-transition regressions are visible",
+      "confirm the artifact feels like a clean bugfix patch rather than a broken conversion"
+    ],
+    "expected_visible_state": {
+      "internal_title": "ZELDANODENSETSU",
+      "fresh_boot_sane": true
+    },
+    "planned_flow": [
+      "boot patched ROM",
+      "enter a normal early playable state",
+      "check for obvious regressions",
+      "treat this as the cartridge-test-intended Zelda baseline artifact"
+    ]
+  },
+  "assertions": [
+    "patched_rom_boots",
+    "title_screen_is_reached",
+    "early_playable_state_is_reached",
+    "visible_world_state_is_sane",
+    "source_harness_files_exist"
+  ],
+  "result": {
+    "preflight_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/zelda-general-bugfixes-preflight.json",
+    "manual_assist_artifact": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/validation/zelda-general-bugfixes-manual-assist.json"
+  }
+}

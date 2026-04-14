@@ -1,0 +1,41 @@
+{
+  "scenario_id": "super-metroid-starting-energy-199",
+  "status": "pass",
+  "mode": "preflight_only",
+  "runtime": "BizHawk",
+  "host_resolution": {
+    "preferred_host": "BizHawk",
+    "available_hosts": [
+      {
+        "host": "Snes9x",
+        "paths": [
+          "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63.app",
+          "/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app"
+        ],
+        "which": null
+      }
+    ],
+    "selected_host": "Snes9x",
+    "mode": "manual_assist",
+    "blocked_reason": "preferred host 'BizHawk' not available on this machine"
+  },
+  "rom_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/build/super-metroid-starting-energy-199.sfc",
+  "rom_sha256": "06a9868b9a73eea2109b6e823d89d5c8a290597195c2fa455e7c23a0273b560e",
+  "analysis_path": "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/analysis/super-metroid-starting-energy-199-rom.json",
+  "entry_scripts": [
+    "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/open_in_snes9x.sh",
+    "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_harness.py",
+    "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/run_tas_manual_assist.py",
+    "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/tools/complete_tas_manual_assist.py",
+    "/Users/theysayheygreg/clawd/projects/reverse-engineering-games/snes/patches/metroid/sm-starting-energy-199.asm"
+  ],
+  "candidate_transition": null,
+  "assertions": [
+    "patched_rom_boots",
+    "fresh_file_creation_succeeds",
+    "first_controllable_state_is_reached",
+    "visible_energy_matches_199",
+    "source_harness_files_exist"
+  ],
+  "errors": []
+}

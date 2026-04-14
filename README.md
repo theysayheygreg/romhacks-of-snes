@@ -73,6 +73,8 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `lanes/metroid/standalone-rom-01.md`: first standalone Super Metroid ROM artifact note
 - `analysis/validation/super-metroid-known-door-transition-preflight.json`: first generated Metroid TAS-harness preflight artifact
 - `analysis/validation/super-metroid-known-door-transition-manual-assist.json`: first generated Metroid manual-assist harness artifact for the current `Snes9x` host lane
+- `analysis/validation/super-metroid-starting-energy-199-preflight.json`: standalone Metroid artifact harness preflight for the 199-energy patch ROM
+- `analysis/validation/super-metroid-starting-energy-199-manual-assist.json`: standalone Metroid artifact manual-assist checklist for the 199-energy patch ROM
 - `analysis/super-metroid-starting-energy-199-rom.json`: probe artifact for the first standalone Super Metroid ROM output
 - `lanes/zelda/tas-harness-01.md`: first concrete Zelda TAS-adjacent harness note anchored to fresh-file boot
 - `lanes/zelda/standalone-rom-01.md`: first standalone Zelda ROM artifact note
@@ -80,6 +82,8 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - `analysis/validation/zelda3-fresh-file-boot-manual-assist.json`: first generated Zelda manual-assist harness artifact
 - `analysis/validation/zelda3-basic-world-state-preflight.json`: second Zelda harness preflight artifact anchored to trusted WRAM/SRAM state
 - `analysis/validation/zelda3-basic-world-state-manual-assist.json`: second Zelda manual-assist harness artifact for basic world-state sanity
+- `analysis/validation/zelda-general-bugfixes-preflight.json`: standalone Zelda artifact harness preflight for the general bugfix patch ROM
+- `analysis/validation/zelda-general-bugfixes-manual-assist.json`: standalone Zelda artifact manual-assist checklist for the general bugfix patch ROM
 - `analysis/zelda-general-bugfixes-rom.json`: probe artifact for the first standalone Zelda ROM output
 - `lanes/smw/INTAKE.md`: intake checklist for standing up the SMW lane with a base ROM and repos
 - `lanes/smw/lunar-magic-01.md`: local Lunar Magic tooling classification and supported-ROM notes
@@ -111,9 +115,11 @@ This subfolder is the working area for building a reusable SNES knowledge base:
 - The first real Super Metroid harness scenario now lives in `harness/scenarios/super-metroid-known-door-transition.json` with a preflight runner at `tools/run_tas_harness.py`.
 - The first concrete Zelda harness scenario now lives in `harness/scenarios/zelda3-fresh-file-boot.json`.
 - The second Zelda harness scenario now lives in `harness/scenarios/zelda3-basic-world-state.json`.
+- The standalone Zelda artifact harness scenario now lives in `harness/scenarios/zelda-general-bugfixes.json`.
 - The current executable Metroid harness lane is `Snes9x` manual assist via `tools/run_tas_manual_assist.py`.
 - The current manual-assist completion step is recorded through `tools/complete_tas_manual_assist.py`.
 - The first concrete SMW harness scenario now lives in `harness/scenarios/smw-starting-lives-09.json`.
+- The standalone Metroid artifact harness scenario now lives in `harness/scenarios/super-metroid-starting-energy-199.json`.
 - `snes/` is now a standalone git repository for the workspace itself.
 - Verified locally on this Mac:
   - `bsnes` source build

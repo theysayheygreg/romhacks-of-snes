@@ -31,6 +31,7 @@ Flow:
 - Added a second Zelda manual-assist slice that ties fresh-file smoke testing back to trusted `jpdasm` and randomizer WRAM/SRAM anchors for basic world-state sanity.
 - Promoted the existing Zelda general-bugfix patch path into a stable standalone artifact with a durable output name and probe record.
 - Added the first standalone Super Metroid gameplay-state artifact by patching the vanilla new-file starting energy from 99 to 199.
+- Added dedicated harness scenarios and pending operator artifacts for the standalone Zelda general-bugfix ROM and the standalone Metroid 199-energy ROM so both promoted outputs are now first-class validation targets.
 
 ### 2026-03-09
 
