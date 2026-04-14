@@ -33,6 +33,7 @@ Flow:
 - Added the first standalone Super Metroid gameplay-state artifact by patching the vanilla new-file starting energy from 99 to 199.
 - Added dedicated harness scenarios and pending operator artifacts for the standalone Zelda general-bugfix ROM and the standalone Metroid 199-energy ROM so both promoted outputs are now first-class validation targets.
 - Ran the first manual-assist checks for the standalone Zelda and Metroid artifacts; both loaded in `Snes9x` but appeared to hang or crash immediately after window interaction, so both result artifacts are now recorded as `fail` pending a base-ROM control check and emulator/input-path sanity pass.
+- Isolated the shared click-triggered hang to the macOS `Snes9x` interaction path rather than the ROMs, then built a local harness app that disables the startup ROM-info overlay and ignores viewport mouse clicks; clean Zelda now boots and can start a real save file via keyboard in that harness build.
 
 ### 2026-03-09
 

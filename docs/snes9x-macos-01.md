@@ -14,6 +14,10 @@ Current custom controller-test app:
 
 - `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-deadzone-05.app`
 
+Current local harness/debug app:
+
+- `/Users/theysayheygreg/Documents/SNES/emulators/Snes9x-1.63-no-rominfo.app`
+
 Source archive used:
 
 - `https://github.com/snes9xgit/snes9x/releases/download/1.63/snes9x-1.63-Mac.zip`
@@ -63,6 +67,8 @@ Observed note:
 - the simplest controller fix is to patch the staged app bundle's SDL controller database with the upstream PS5 macOS mapping and then install a direct DualSense binding set for `1356:3302:0`
 - `Snes9x` persists only one input per SNES direction in prefs, so this local setup uses the left stick rather than duplicating both stick and D-pad
 - a custom source-built app now exists with a firmer `0.5` left-stick dead zone for drift testing on this older DualSense
+- a second custom source-built app now exists for harness/debug use with the startup ROM-info overlay disabled and viewport mouse clicks ignored
+- that local harness build was used to confirm that clean Zelda can boot and start a real save file via keyboard without the earlier click-triggered hang
 
 ## Workspace role
 
@@ -76,6 +82,7 @@ Current status:
 
 - the stable release app remains the default day-to-day lane
 - the custom `deadzone-05` app is a side-by-side controller experiment lane
+- the custom `no-rominfo` app is the local harness/debug lane for isolating macOS focus/input issues
 - the DualSense is working as Player 1 in the stable harness
 - the first visible SMW gameplay patch boots and plays correctly through this setup
 

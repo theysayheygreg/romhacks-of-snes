@@ -39,6 +39,7 @@ It is not a full session transcript.
 - `patches/metroid/sm-starting-energy-199.asm`, `tools/apply_sm_starting_energy_199.sh`, `lanes/metroid/standalone-rom-01.md`, and `analysis/super-metroid-starting-energy-199-rom.json` as the first durable standalone Super Metroid ROM artifact lane.
 - `harness/scenarios/zelda-general-bugfixes.json` plus matching preflight and manual-assist artifacts as the first standalone Zelda artifact harness lane.
 - `harness/scenarios/super-metroid-starting-energy-199.json` plus matching preflight and manual-assist artifacts as the first standalone Metroid artifact harness lane.
+- `Snes9x-1.63-no-rominfo.app` as a local macOS harness/debug app for isolating startup-overlay and click-path issues without replacing the default release app.
 
 ### Changed
 
@@ -47,6 +48,7 @@ It is not a full session transcript.
 - Added a reusable DualSense setup path for the staged `snes9x` app on this Mac.
 - Added a separate `snes9x` controller-test app with a stronger analog-stick dead zone for local drift comparison.
 - Added the first explicit backlog slice for TAS-style deterministic smoke testing across the shared SNES lane plus Zelda, Metroid, and SMW.
+- Added a local macOS `Snes9x` harness build that disables the startup ROM-info overlay and stops viewport clicks from being treated as emulator input for smoke-test workflows.
 
 ### Verified
 
@@ -63,6 +65,7 @@ It is not a full session transcript.
 - The workspace now has low-risk standalone ROM artifacts for Zelda, Super Metroid, and SMW.
 - The promoted standalone Zelda and Metroid ROM outputs are now wired into the same harness/preflight/manual-assist flow as the earlier lane-specific smoke tests.
 - The first manual-assist runs against the promoted standalone Zelda and Metroid outputs are now recorded as failed results, with a shared note that the common click-triggered hang pattern may indicate an emulator/input-path issue rather than two independent patch regressions.
+- Clean Zelda now boots successfully through the local `Snes9x` harness/debug build, and a real save file can be started via keyboard without the earlier click-triggered hang.
 
 ## 2026-03-09
 
